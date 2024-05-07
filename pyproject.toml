@@ -12,9 +12,9 @@ packages = [{ include = "{{module_name}}", from = "src/python" }]
 python = "^3.10"
 
 [tool.poetry.group.dev.dependencies]
-coverage = "^7.4.1"
+coverage = "^7.5.1"
 ipykernel = "^6.29.2"
-ruff = "^0.2.1"
+ruff = "^0.4.3"
 pyright = "^1.1.349"
 pytest = "^8.0.0"
 
