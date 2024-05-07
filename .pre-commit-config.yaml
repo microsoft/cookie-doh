@@ -2,7 +2,7 @@ ci:
   autofix_prs: false
   autoupdate_commit_msg: ":arrow-up: dep-bump(pre-commit): update pre-commit hooks"
 
-default_install_hook_types: [pre-commit, pre-push, commit-msg]
+default_install_hook_types: [pre-commit, commit-msg]
 
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
@@ -47,9 +47,6 @@ repos:
     hooks:
       - id: commitizen
         additional_dependencies: [cz-conventional-gitmoji]
-      - id: commitizen-branch
-        additional_dependencies: [cz-conventional-gitmoji]
-        stages: [push]
 
   - repo: https://github.com/ljnsn/cz-conventional-gitmoji
     rev: v0.3.1
