@@ -1,0 +1,86 @@
+# questions
+organization:
+  type: str
+  help: |
+    GitHub organization or username for this repository.
+    E.g., "microsoft", "your_username", "your_organization", etc.
+
+project_name:
+  type: str
+  help: What is your project name?
+  validator: >-
+    {% if not (project_name | regex_search('^[a-zA-Z_][a-zA-Z0-9\-_]*$')) %}
+    project_name must start with a letter, followed by one or more letters, digits, dashes or underscores.
+    {% endif %}
+
+module_name:
+  type: str
+  help: What is your Python module name? Can be the same as your project's name.
+  default: "{{ project_name|lower|replace(' ', '_')|replace('-', '_') }}"
+  validator: >-
+    {% if not (module_name | regex_search('^[a-zA-Z_][a-zA-Z0-9_]*')) %}
+    project_name must start with a letter, followed by one or more letters, digits or underscores.
+    {% endif %}
+
+  repo_exists:
+    type: bool
+    help: Does this repository already exist on GitHub?
+    default: false
+
+_exclude:
+  - CHANGELOG.md
+  - cookie-doh.code-workspace
+  - poetry.lock
+  - copier.yaml
+  - copier.yml
+  - .git
+  - .DS_Store
+  - .svn
+  - "~*"
+  - "*.py[co]"
+  - __pycache__
+
+_message_after_copy: |
+  Your project "{{ project_name }}" has been created successfully! 🎉
+
+  Next steps:
+
+  {% if repo_exists -%}
+
+  1. Pull repository into your newly created project:
+
+     $ cd {{ _copier_conf.dst_path }}
+     $ git remote add origin https://github.com/{{ organization }}/{{ project_name }}.git
+     $ git pull origin main  # and resolve any conflicts
+
+  {% else -%}
+  1. Create a new repository on GitHub:
+
+    a. Install the GitHub CLI (if you haven't already): https://cli.github.com/
+    b. Authenticate with GitHub and create the new repository:
+
+       $ gh auth login
+       $ gh repo create {{ organization }}/{{ project_name }} --private --remote=origin
+       $ cd {{ _copier_conf.dst_path }}
+
+  {% endif -%}
+
+  2. Add project dependencies to `pyproject.toml` and install them with Poetry:
+
+     $ poetry add <new-dependencies>  # optional
+     $ poetry install
+
+  3. Add the project's outputs, configure pre-commit and commit your changes:
+
+     $ git add .
+     $ pre-commit install --install-hooks
+     $ git commit -m "init: initialize repo"
+
+  5. Happy coding! 🚀
+
+_message_after_update: |
+  Your project "{{ project_name }}" has been updated! 🎉
+  In case there are any conflicts, please resolve them. Then, you're done! 🚀
+
+_message_before_copy: |
+  💃 Thanks for generating a project using our template! 🕺

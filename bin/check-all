@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+echo "RUNNING PRE-COMMIT HOOKS"
+pre-commit run --all
+
+echo
+echo "RUNNING RUFF CHECK"
+poetry run ruff check
+
+echo
+echo "RUNNING RUFF FORMAT"
+poetry run ruff format
+
+echo
+echo "RUNNING PYRIGHT"
+poetry run pyright
+
+echo
+echo "RUNNING PYTEST AND COVERAGE"
+poetry run coverage run -m pytest
+
+echo
+echo "BUILDING API AND MARKDOWN DOCS"
+build-docs

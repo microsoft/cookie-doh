@@ -1,0 +1,11 @@
+[run]
+branch = True
+data_file = .tmp/.coverage
+source = src/python/{{module_name}}
+relative_files = true
+
+[report]
+show_missing = true
+
+[xml]
+output = .tmp/reports/coverage.xml

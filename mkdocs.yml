@@ -1,0 +1,86 @@
+site_name: "{{project_name}}"
+repo_url: https://github.com/{{organization}}/{{project_name}}
+repo_name: "{{project_name}}"
+docs_dir: docs
+theme:
+  name: material
+  logo: images/logo.png
+  favicon: images/favicon.ico
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  icon:
+    repo: fontawesome/brands/github-alt
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.path
+    - content.code.copy
+    - toc.follow
+    - navigation.top
+extra_css:
+  - css/extra.css
+# removed because of codeql detection
+# https://github.com/{{organization}}/{{project_name}}/security/code-scanning/3
+# https://github.com/{{organization}}/{{project_name}}/security/code-scanning/4
+#extra_javascript:
+#  - js/mathjax.js
+#  - js/tex-mml-chtml.js
+plugins:
+  - search
+  - awesome-pages
+  - mkdocs-video:
+      is_video: true
+      video_controls: true
+markdown_extensions:
+  # Allows for nicely styled notes and warnings: !!! note
+  - admonition
+  # Allows for adding attributes to markdown content: !(some-image){: align=left }
+  - attr_list
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.magiclink
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - toc:
+      permalink: true
+  - def_list # definition / description lists
+  - pymdownx.tasklist: # Allows us to make a Tasklist: [x] some checked thing
+      custom_checkbox: true
+  # removed because of codeql detection
+  # https://github.com/{{organization}}/{{project_name}}/security/code-scanning/3
+  # https://github.com/{{organization}}/{{project_name}}/security/code-scanning/4
+  #  - pymdownx.arithmatex:
+  #      generic: true
+  # Needed because sphinx is generating lists with 2 spaces which is not supported by mkdocs
+  # See: https://github.com/mkdocs/mkdocs/issues/545
+  - mdx_truly_sane_lists

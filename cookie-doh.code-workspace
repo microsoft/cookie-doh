@@ -1,0 +1,89 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "files.exclude": {
+            // tool-generated dirs/files
+            ".mypy_cache": true,
+            ".pytest_cache": true,
+            ".coverage": true,
+            "**/tags": true,
+            "**/build": true,
+            // other editor/ide settings
+            "**/.idea": true,
+            "**/__pycache__": true,
+            "**/.venv": true,
+            "**/dist": true
+        },
+        // settings to apply to all workspace roots
+        "debug.toolBarLocation": "commandCenter",
+        "diffEditor.diffAlgorithm": "advanced",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit",
+            "source.fixAll": "explicit",
+        },
+        "editor.rulers": [
+            99
+        ],
+        "[dockercompose]": {
+            "editor.autoIndent": "advanced"
+        },
+        "[jsonc]": {
+            "editor.defaultFormatter": "vscode.json-language-features"
+        },
+        "[python]": {
+            "editor.defaultFormatter": "charliermarsh.ruff"
+        },
+        "[yaml]": {
+            "editor.autoIndent": "advanced"
+        },
+        "files.insertFinalNewline": true,
+        "files.trimFinalNewlines": true,
+        "markdown.validate.enabled": true,
+        "notebook.formatOnSave.enabled": true,
+        "notebook.codeActionsOnSave": {
+            "source.fixAll": true,
+            "source.organizeImports": true
+        },
+        "python.languageServer": "Pylance",
+        "python.analysis.typeCheckingMode": "basic",
+        "python.analysis.autoImportCompletions": true,
+        "python.analysis.extraPaths": [
+            "${workspaceFolder}/src/python"
+        ],
+        "python.autoComplete.extraPaths": [
+            "${workspaceFolder}/src/python"
+        ],
+        "python.analysis.inlayHints.pytestParameters": true,
+        "python.defaultInterpreterPath": ".venv/bin/python",
+        "python.envFile": "${workspaceFolder}/.envrc",
+        "search.exclude": {
+            "**/build": true,
+            "**/.tmp": true,
+            "**/outputs": true,
+            "**/__pycache__": true,
+            "**/.venv": true,
+            "**/dist": true
+        },
+        "yaml.format.bracketSpacing": false,
+        "yaml.format.enable": true,
+        "yaml.format.printWidth": 99,
+    },
+    "extensions": {
+        "recommendations": [
+            "ms-python.python",
+            "ms-python.vscode-pylance",
+            "ms-python.debugpy",
+            "charliermarsh.ruff",
+            "eamodio.gitlens",
+            "redhat.vscode-yaml",
+            "bierner.github-markdown-preview",
+            "GitHub.copilot",
+            "GitHub.vscode-pull-request-github"
+        ]
+    }
+}
