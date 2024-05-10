@@ -19,6 +19,10 @@
     },
     "onCreateCommand": ".devcontainer/on-create.sh",
     "postCreateCommand": ".devcontainer/post-create.sh",
+    "remoteEnv": {
+        "WANDB_API_KEY": "${localEnv:WANDB_API_KEY}",
+        "WANDB_BASE_URL": "${localEnv:WANDB_BASE_URL}"
+    },
     "customizations": {
         "vscode": {
             "extensions": [

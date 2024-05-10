@@ -1,0 +1,29 @@
+
+name: pre-commit
+
+on:
+  workflow_call:
+
+jobs:
+  pre-commit:
+    runs-on: ubuntu-latest
+    name: pre-commit
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install -U pip
+          pip install -U pre-commit
+          pre-commit install --install-hooks
+
+      - name: pre-commit
+        run: |
+          pre-commit run --all-files
+        env:
+          SKIP: "ruff,ruff-format,pyright"
