@@ -13,12 +13,11 @@ Cookie-doh info
 
 -----------------------------------------------------------------
 
-
 ## :notebook_with_decorative_cover: Documentation
 https://microsoft.github.io/cookie-doh
 
 
-## :github: Source Code
+## :floppy_disk: Source Code
 https://github.com/microsoft/cookie-doh
 
 
