@@ -1,0 +1,36 @@
+name: build-docs
+
+on:
+  workflow_call:
+
+jobs:
+  build-docs:
+    runs-on: ubuntu-latest
+    name: build-docs
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          python -m pip install -U pip
+          pip install -U poetry
+          poetry install
+
+      - name: build-docs
+        run: |
+          bin/build-docs
+
+      - name: upload-gh-pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist/site
+
+  deploy-docs:
+    needs: [build-docs]
+    runs-on: ubuntu-latest
+    name: deploy-docs
+    if: github.ref_name == 'main'
+    steps:
+      - name: deploy-gh-pages
+        id: deployment
+        uses: actions/deploy-pages@v4

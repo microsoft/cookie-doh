@@ -13,13 +13,6 @@ name: CodeQL
 
 on:
   workflow_call:
-  schedule:
-    - cron: '42 23 * * 4'
-
-permissions:
-  contents: read
-  actions: read
-  security-events: write
 
 jobs:
   analyze:
