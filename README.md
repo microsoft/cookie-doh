@@ -1,6 +1,6 @@
 # :cookie: {{project_name}}
 
-[![CI](https://github.com/health-futures/cookie-doh/actions/workflows/ci.yml/badge.svg)](https://github.com/health-futures/cookie-doh/actions/workflows/ci.yml)
+[![main](https://github.com/microsoft/cookie-doh/actions/workflows/main.yml/badge.svg)](https://github.com/microsoft/cookie-doh/actions/workflows/main.yml)
 [![Checked with pyright](https://microsoft.github.io/pyright/img/pyright_badge.svg)](https://microsoft.github.io/pyright/)
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
