@@ -1,4 +1,4 @@
-# :cookie: {{project_name}}
+# :cookie: cookie-doh
 
 [![main](https://github.com/microsoft/cookie-doh/actions/workflows/main.yml/badge.svg)](https://github.com/microsoft/cookie-doh/actions/workflows/main.yml)
 [![Checked with pyright](https://microsoft.github.io/pyright/img/pyright_badge.svg)](https://microsoft.github.io/pyright/)
@@ -18,8 +18,8 @@ Cookie-doh info
 https://microsoft.github.io/cookie-doh
 
 
-## :octocat: Source Code
-https://microsoft.github.io/cookie-doh
+## :github: Source Code
+https://github.com/microsoft/cookie-doh
 
 
 ## :rocket: Getting Started

@@ -1,1 +1,1 @@
-# :sparkles: {{project_name}}
+# :cookie: cookie-doh
