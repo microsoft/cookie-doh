@@ -1,8 +1,8 @@
 {
   "pythonVersion": "3.10",
   "include": [
-    "src/python",
-    "test/python"
+    "src",
+    "test"
   ],
   "exclude": [
     "**/__pycache__"

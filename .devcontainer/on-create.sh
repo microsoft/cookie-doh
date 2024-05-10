@@ -9,7 +9,7 @@ echo 'eval "$(direnv hook zsh)"' >> ~/.zshrc
 echo 'eval "$(direnv hook bash)"' >> ~/.bashrc
 eval "$(direnv hook bash)"
 mkdir -p ~/.config/direnv/
-cp /workspaces/{{project_name}}/.devcontainer/direnvrc ~/.config/direnv/direnvrc
+cp /workspaces/cookie-doh/.devcontainer/direnvrc ~/.config/direnv/direnvrc
 
 echo "UPDATE PIP"
 pip install --upgrade pip

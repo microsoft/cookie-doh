@@ -1,11 +1,11 @@
 [tool.poetry]
-name = "cookie-doh"
+name = "{{project_name}}"
 version = "0.0.0"
 description = ""
-authors = ["microsoft"]
+authors = []
 license = "MIT License"
 readme = "README.md"
-packages = [{ include = "cookie", from = "src" }]
+packages = [{ include = "{{module_name}}", from = "src" }]
 
 [tool.poetry.dependencies]
 # write here dependencies of your project
@@ -17,7 +17,7 @@ ipykernel = "*"
 ruff = "*"
 pyright = "*"
 pytest = "*"
-
+{% if documentation %}
 [tool.poetry.group.docs.dependencies]
 mdx-truly-sane-lists = "*"
 mkdocs = "*"
@@ -28,7 +28,7 @@ pymdown-extensions = "*"
 sphinx = "*"
 sphinx-autodoc-typehints = "*"
 sphinx-markdown-builder = "*"
-
+{% endif %}
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"

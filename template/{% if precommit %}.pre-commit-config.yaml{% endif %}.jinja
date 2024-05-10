@@ -1,0 +1,70 @@
+ci:
+  autofix_prs: false
+  autoupdate_commit_msg: ":arrow-up: dep-bump(pre-commit): update pre-commit hooks"
+
+default_install_hook_types: [pre-commit, commit-msg]
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: check-ast
+      - id: check-added-large-files
+      - id: check-case-conflict
+      - id: check-docstring-first
+      - id: check-executables-have-shebangs
+      - id: check-merge-conflict
+      - id: check-shebang-scripts-are-executable
+      - id: check-symlinks
+      - id: check-toml
+      - id: check-xml
+        exclude: (?x)(^.idea/)
+      - id: check-yaml
+        args: ["--unsafe"]
+      - id: debug-statements
+      - id: detect-private-key
+      - id: end-of-file-fixer
+      - id: forbid-submodules
+      - id: trailing-whitespace
+
+  - repo: https://gitlab.com/bmares/check-json5
+    rev: v1.0.0
+    hooks:
+      - id: check-json5
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.4.3
+    hooks:
+      - id: ruff # linter
+        name: ruff-check
+        types_or: [python, pyi, jupyter]
+        args: [--fix]
+      - id: ruff-format # formatter
+        types_or: [python, pyi, jupyter]
+{% if commitizen %}
+  - repo: https://github.com/commitizen-tools/commitizen
+    rev: v3.25.0
+    hooks:
+      - id: commitizen
+        additional_dependencies: [cz-conventional-gitmoji]
+
+  - repo: https://github.com/ljnsn/cz-conventional-gitmoji
+    rev: v0.3.1
+    hooks:
+      - id: conventional-gitmoji
+{% endif %}
+{%- if documentation %}
+  - repo: https://github.com/asottile/blacken-docs
+    rev: 1.16.0
+    hooks:
+      - id: blacken-docs
+        additional_dependencies: [black]
+{% endif %}
+  - repo: https://github.com/codespell-project/codespell
+    rev: v2.2.6
+    hooks:
+      - id: codespell
+        name: Run codespell to check for common misspellings in files
+        language: python
+        types: [text]
+        exclude: "poetry.lock|CHANGELOG.md"

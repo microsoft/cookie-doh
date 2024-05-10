@@ -1,0 +1,28 @@
+name: pr
+
+on:
+  pull_request:
+    branches: [ main ]
+
+concurrency:
+  group: {% raw %}${{ github.workflow }}-${{ github.ref }}{% endraw %}
+  cancel-in-progress: true
+
+jobs:
+{%- if precommit %}
+  pre-commit:
+    uses: ./.github/workflows/pre-commit.yml
+{% endif %}
+  run-tests:
+    uses: ./.github/workflows/run-tests.yml
+{% if documentation %}
+  build-docs:
+    uses: ./.github/workflows/build-docs.yml
+{% endif %}
+  codeql:
+    uses: ./.github/workflows/codeql.yml
+    secrets: inherit
+    permissions:
+      contents: read
+      actions: read
+      security-events: write

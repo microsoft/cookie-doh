@@ -1,28 +1,18 @@
-# :cookie: {{project_name}}
+# :sparkles: {{ project_name }}
 
-[![main](https://github.com/microsoft/cookie-doh/actions/workflows/main.yml/badge.svg)](https://github.com/microsoft/cookie-doh/actions/workflows/main.yml)
-[![Checked with pyright](https://microsoft.github.io/pyright/img/pyright_badge.svg)](https://microsoft.github.io/pyright/)
+[![main](https://github.com/{{ organization }}/{{ project_name }}/actions/workflows/main.yml/badge.svg)](https://github.com/{{ organization }}/{{ project_name }}/actions/workflows/main.yml)
+[![Checked with pyright](https://{{ organization }}.github.io/pyright/img/pyright_badge.svg)](https://{{ organization }}.github.io/pyright/)
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Cookie-doh info
-
-<p align="center">
-:point_right: Short-link: https://aka.ms/cookie-doh
-</p>
-
 -----------------------------------------------------------------
 
+{{ project_name }} info
 
+{% if documentation -%}
 ## :notebook_with_decorative_cover: Documentation
-https://microsoft.github.io/cookie-doh
-
-
-## :octocat: Source Code
-https://microsoft.github.io/cookie-doh
-
-
-## :rocket: Getting Started
+https://{{ organization }}.github.io/{{ project_name }}
+{%- endif -%}
 
 
 ### Optional system dependencies
@@ -32,13 +22,9 @@ We use the following optional dependencies for development:
 * [direnv](https://direnv.net/): To manage environment variables and load python virtual environments automatically.
 * [pyenv](https://github.com/pyenv/pyenv): To manage python versions.
 * [pipx](https://pipxproject.github.io/pipx/): To install python packages in isolated environments.
-{% if commitizen -%}
 * [commitizen](https://commitizen-tools.github.io/commitizen/): To help with [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/).
 * [cz-conventional-gitmoji](https://github.com/ljnsn/cz-conventional-gitmoji): A commitizen plugin that combines gitmoji and conventional commits.
-{%- endif %}
-{% if precommit -%}
 * [pre-commit](https://pre-commit.com/): To run code formatting and linting before committing.
-{%- endif %}
 
 ### Required system dependencies
 
@@ -66,16 +52,19 @@ and/or [PyCharm](https://www.jetbrains.com/help/pycharm/connect-to-devcontainer.
 
 Learn about [GitHub Codespaces](https://docs.github.com/en/codespaces) and/or [DevPod](https://devpod.sh/).
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/{{organization}}/{{project_name}})
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/{{ organization }}/{{ project_name }})
 
-[![Open in DevPod!](https://devpod.sh/assets/open-in-devpod.svg)](https://devpod.sh/open#https://github.com/{{organization}}/{{project_name}})
+[![Open in DevPod!](https://devpod.sh/assets/open-in-devpod.svg)](https://devpod.sh/open#https://github.com/{{ organization }}/{{ project_name }})
 
 
+
+
+{% if organization == 'microsoft' %}
 --------------------------------------------
 
 ## :mountain: Contributing
 
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
+This project welcomes contributions and suggestions. Most contributions require you to agree to a
 Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
 the rights to use your contribution. For details, visit https://cla.opensource.microsoft.com.
 
@@ -95,3 +84,26 @@ trademarks or logos is subject to and must follow
 [Microsoft's Trademark & Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general).
 Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship.
 Any use of third-party trademarks or logos are subject to those third-party's policies.
+{% endif %}
+
+
+{% if organization != 'microsoft' and microsoft_internal %}
+## :memo: Guide to using GitHub inside {{ organization }}
+
+You can find information on using GitHub inside {{ organization }} at [aka.ms/gim](https://aka.ms/gim).
+
+<details>
+  <summary>Expand for links to common tasks</summary>
+
+- [Switching between EMU GitHub and normal GitHub without logging out and back in constantly](https://aka.ms/StartRight/README-Template/maintainingMultipleAccount)
+- [Creating a repository](https://aka.ms/StartRight)
+- [Changing repository visibility](https://aka.ms/StartRight/README-Template/policies/jit)
+- [Gaining repository permissions, access, and roles](https://aka.ms/StartRight/README-TEmplates/gim/policies/access)
+- [Enabling easy access to your low sensitivity and widely applicable repository by setting it to Internal Visibility and having any FTE who wants to see it join the 1ES Enterprise Visibility MyAccess Group](https://aka.ms/StartRight/README-Template/gim/innersource-access)
+- [Migrating repositories](https://aka.ms/StartRight/README-Template/troubleshoot/migration)
+- [Setting branch protection](https://aka.ms/StartRight/README-Template/gim/policies/branch-protection)
+- [Setting up GitHubActions](https://aka.ms/StartRight/README-Template/policies/actions)
+- [and other actions](https://aka.ms/StartRight/README-Template/gim/policies)
+
+</details>
+{% endif %}

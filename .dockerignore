@@ -10,7 +10,7 @@
 **/.vscode
 **/*.pyc
 
-**/src/python/*.egg-info
+**/src/*.egg-info
 **/build/
 **/dist
 

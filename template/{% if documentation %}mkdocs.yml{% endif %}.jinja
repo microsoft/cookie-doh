@@ -1,6 +1,6 @@
-site_name: "cookie-doh"
-repo_url: https://github.com/microsoft/cookie-doh
-repo_name: "cookie-doh"
+site_name: "{{project_name}}"
+repo_url: https://github.com/{{organization}}/{{project_name}}
+repo_name: "{{project_name}}"
 docs_dir: docs
 theme:
   name: material
@@ -40,8 +40,8 @@ theme:
 extra_css:
   - css/extra.css
 # removed because of codeql detection
-# https://github.com/microsoft/cookie-doh/security/code-scanning/3
-# https://github.com/microsoft/cookie-doh/security/code-scanning/4
+# https://github.com/{{organization}}/{{project_name}}/security/code-scanning/3
+# https://github.com/{{organization}}/{{project_name}}/security/code-scanning/4
 #extra_javascript:
 #  - js/mathjax.js
 #  - js/tex-mml-chtml.js
@@ -77,8 +77,8 @@ markdown_extensions:
   - pymdownx.tasklist: # Allows us to make a Tasklist: [x] some checked thing
       custom_checkbox: true
   # removed because of codeql detection
-  # https://github.com/microsoft/cookie-doh/security/code-scanning/3
-  # https://github.com/microsoft/cookie-doh/security/code-scanning/4
+  # https://github.com/{{organization}}/{{project_name}}/security/code-scanning/3
+  # https://github.com/{{organization}}/{{project_name}}/security/code-scanning/4
   #  - pymdownx.arithmatex:
   #      generic: true
   # Needed because sphinx is generating lists with 2 spaces which is not supported by mkdocs
