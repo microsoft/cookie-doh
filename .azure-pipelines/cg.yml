@@ -2,7 +2,7 @@ trigger: [main]
 pr: [main]
 schedules:
   - cron: "0 0 * * 1"
-    displayName: "Weekly: {{project_name}}"
+    displayName: "Weekly: cookie-doh"
     branches:
       include:
         - main

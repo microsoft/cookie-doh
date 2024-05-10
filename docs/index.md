@@ -1,1 +1,1 @@
-# :cookie: {{project_name}}
+# :sparkles: {{project_name}}

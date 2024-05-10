@@ -53,10 +53,10 @@
         "python.analysis.typeCheckingMode": "basic",
         "python.analysis.autoImportCompletions": true,
         "python.analysis.extraPaths": [
-            "${workspaceFolder}/src/python"
+            "${workspaceFolder}/src"
         ],
         "python.autoComplete.extraPaths": [
-            "${workspaceFolder}/src/python"
+            "${workspaceFolder}/src"
         ],
         "python.analysis.inlayHints.pytestParameters": true,
         "python.defaultInterpreterPath": ".venv/bin/python",

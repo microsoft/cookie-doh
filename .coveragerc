@@ -1,7 +1,7 @@
 [run]
 branch = True
 data_file = .tmp/.coverage
-source = src/python/{{module_name}}
+source = src
 relative_files = true
 
 [report]

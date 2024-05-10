@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+{% if precommit %}
+echo "RUNNING PRE-COMMIT HOOKS"
+pre-commit run --all
+{% endif %}
+echo
+echo "RUNNING RUFF CHECK"
+poetry run ruff check
+
+echo
+echo "RUNNING RUFF FORMAT"
+poetry run ruff format
+
+echo
+echo "RUNNING PYRIGHT"
+poetry run pyright
+
+echo
+echo "RUNNING PYTEST AND COVERAGE"
+poetry run coverage run -m pytest
+{% if documentation %}
+echo
+echo "BUILDING API AND MARKDOWN DOCS"
+build-docs
+{% endif -%}

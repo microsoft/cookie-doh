@@ -4,6 +4,7 @@ organization:
   help: |
     GitHub organization or username for this repository.
     E.g., "microsoft", "your_username", "your_organization", etc.
+  default: microsoft
 
 project_name:
   type: str
@@ -22,10 +23,48 @@ module_name:
     project_name must start with a letter, followed by one or more letters, digits or underscores.
     {% endif %}
 
-  repo_exists:
-    type: bool
-    help: Does this repository already exist on GitHub?
-    default: false
+documentation:
+  type: bool
+  help: |
+    Do you want to include documentation in your project?
+    This will add a `docs` directory with a basic `sphinx` setup and CI builds.
+  default: true
+
+precommit:
+  type: bool
+  help: |
+    Do you want to include pre-commit hooks in your project?
+    This will add a `.pre-commit-config.yaml` file with some basic hooks.
+  default: true
+
+commitizen:
+  type: bool
+  help: |
+    Do you want to include commitizen in your project?
+    This will add a `.cz.toml` file and `commitizen` hooks to .pre-commit-config.yaml (if used).
+  default: true
+
+microsoft_internal:
+  type: bool
+  help: If the project belongs to a Microsoft internal organization
+  when: "{{ false }}"
+  default: "{{ organization in ['microsoft', 'technology-and-research', 'health-futures', 'ai4science'] }}"
+
+license:
+  type: str
+  when: "{{not microsoft_internal}}"
+  help: |
+    What is the copyright holder for the generated LICENSE? Your Name, Your Organization, etc.
+  default: "{% if not microsoft_internal %}{{organization}}{% else %}Microsoft Corporation{% endif %}"
+
+repo_exists:
+  type: bool
+  help: |
+    Does this repository already exist on GitHub? This question will give you instructions
+    create your repository on GitHub later on.
+  default: false
+
+_subdirectory: template
 
 _exclude:
   - CHANGELOG.md
@@ -50,6 +89,7 @@ _message_after_copy: |
   1. Pull repository into your newly created project:
 
      $ cd {{ _copier_conf.dst_path }}
+     $ git init
      $ git remote add origin https://github.com/{{ organization }}/{{ project_name }}.git
      $ git pull origin main  # and resolve any conflicts
 
@@ -70,7 +110,7 @@ _message_after_copy: |
      $ poetry add <new-dependencies>  # optional
      $ poetry install
 
-  3. Add the project's outputs, configure pre-commit and commit your changes:
+  3. Add the project outputs, configure pre-commit and commit your changes:
 
      $ git add .
      $ pre-commit install --install-hooks

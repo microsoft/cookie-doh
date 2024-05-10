@@ -1,0 +1,36 @@
+name: main
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+    tags:
+      - "v[0-9]+.[0-9]+.[0-9]+"
+
+concurrency:
+  group: {% raw %}${{ github.workflow }}-${{ github.ref }}{% endraw %}
+  cancel-in-progress: true
+
+jobs:
+{%- if precommit %}
+  pre-commit:
+    uses: ./.github/workflows/pre-commit.yml
+{% endif %}
+  run-tests:
+    uses: ./.github/workflows/run-tests.yml
+{% if documentation %}
+  build-docs:
+    uses: ./.github/workflows/build-docs.yml
+    secrets: inherit
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+{% endif %}
+  codeql:
+    uses: ./.github/workflows/codeql.yml
+    secrets: inherit
+    permissions:
+      contents: read
+      actions: read
+      security-events: write
