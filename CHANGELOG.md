@@ -2,7 +2,8 @@
 
 ### 🐛🚑️ Fixes
 
-- small link fix when referring to local setup instructionsn
+- fix: add conditional check to fit link in setup instructions
+- small link fix when referring to local setup instructions
 
 ## v0.0.5 (2024-05-13)
 
