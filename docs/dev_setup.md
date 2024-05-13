@@ -1,6 +1,6 @@
 # :computer: local dev setup
 
- If you use [codespaces](index.md#-codespaces) or [devcontainers](index.md#️-devcontainer),
+ If you use [codespaces](index.md#codespaces) or [devcontainers](index.md#devcontainer),
  you don't need to set up a local development environment.
  But otherwise, follow these steps to set up some useful utilities
 
