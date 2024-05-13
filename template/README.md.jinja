@@ -69,7 +69,12 @@ poetry install
 
 We use the following (optional) dependencies for development.
 If you are going to set up a local development environment for your created project, or for cookie-doh
-itself, follow the local development setup [instructions](https://{{ organization }}.github.io/{{ project_name }}/dev_setup).
+itself, follow the local development setup
+{%- if documentation %}
+[instructions](https://{{ organization }}.github.io/{{ project_name }}/dev_setup).
+{% else %}
+[instructions](https://microsoft.github.io/cookie-doh/dev_setup).
+{% endif %}
 
 * [direnv](https://direnv.net/):  To load python virtual environments automatically and manage environment variables.
 * [pyenv](https://github.com/pyenv/pyenv): To manage python versions.
