@@ -1,3 +1,10 @@
+## v0.0.4 (2024-05-13)
+
+### 🐛🚑️ Fixes
+
+- update index.md file in template
+- ignore poetry.lock in codespell
+
 ## v0.0.3 (2024-05-13)
 
 ### 🐛🚑️ Fixes
