@@ -1,3 +1,9 @@
+## v0.0.3 (2024-05-13)
+
+### 🐛🚑️ Fixes
+
+- point to correct readme file in template project
+
 ## v0.0.2 (2024-05-13)
 
 ### ♻️  Refactorings
