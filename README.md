@@ -51,8 +51,8 @@ Visit the documentation:
 
 https://microsoft.github.io/cookie-doh
 
-Go to [getting started with your new repo](https://microsoft.github.io/cookie-doh/getting_started)
-to understand the structure of your new project and how to configure it further.
+Go to [new project](https://microsoft.github.io/cookie-doh/getting_started)
+to create a new project!
 
 
 ## :space_invader: Codespaces
