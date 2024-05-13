@@ -1,3 +1,9 @@
+## v0.0.5 (2024-05-13)
+
+### 🐛🚑️ Fixes
+
+- fix the readme pointers again
+
 ## v0.0.4 (2024-05-13)
 
 ### 🐛🚑️ Fixes
