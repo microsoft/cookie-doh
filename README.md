@@ -5,11 +5,12 @@
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Cookie-doh is a repository template for creating single Python package projects.
+Cookie-doh is a repository template for creating single Python package projects with setup tools and workflows.
 
 It includes [Poetry](https://python-poetry.org/) for dependency management,
 [ruff](https://github.com/astral-sh/ruff) for formatting and linting,
 [pyright](https://github.com/microsoft/pyright) for annotations,
+[codespell](https://github.com/codespell-project/codespell) for spell checking,
 and GitHub Actions for [CI](https://en.wikipedia.org/wiki/Continuous_integration).
 
 Optionally, you can enable documentation builds with
@@ -18,8 +19,9 @@ Optionally, you can enable documentation builds with
 [commitizen](https://commitizen-tools.github.io/commitizen/)
 for writing [conventional commits](https://www.conventionalcommits.org/).
 
-
 :point_right: Short-link: [https://aka.ms/cookie-doh]()
+
+:star: Star this repo to show your support!
 
 -----------------------------------------------------------------
 
