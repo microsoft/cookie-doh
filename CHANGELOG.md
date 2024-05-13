@@ -1,3 +1,9 @@
+## v0.0.6 (2024-05-13)
+
+### 🐛🚑️ Fixes
+
+- small link fix when referring to local setup instructionsn
+
 ## v0.0.5 (2024-05-13)
 
 ### 🐛🚑️ Fixes
