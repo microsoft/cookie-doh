@@ -1,0 +1,13 @@
+{
+    "recommendations": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-python.debugpy",
+        "charliermarsh.ruff",
+        "eamodio.gitlens",
+        "redhat.vscode-yaml",
+        "bierner.github-markdown-preview",
+        "GitHub.copilot",
+        "GitHub.vscode-pull-request-github"
+    ]
+}

@@ -12,10 +12,8 @@
 **/docs/api
 
 # ignore personal workspace files
-**/*.code-workspace
-!cookie-doh.code-workspace
-
 **/.vscode/*
+!**/.vscode/extensions.json
 !**/.vscode/launch.json
 !**/.vscode/settings.json
 
