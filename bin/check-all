@@ -16,6 +16,10 @@ echo "RUNNING PYRIGHT"
 poetry run pyright
 
 echo
+echo "RUNNING CODESPELL"
+poetry run codespell
+
+echo
 echo "RUNNING PYTEST AND COVERAGE"
 poetry run coverage run -m pytest
 

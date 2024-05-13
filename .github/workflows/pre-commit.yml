@@ -26,4 +26,4 @@ jobs:
         run: |
           pre-commit run --all-files
         env:
-          SKIP: "ruff,ruff-format,pyright"
+          SKIP: "ruff,ruff-format,pyright,codespell"

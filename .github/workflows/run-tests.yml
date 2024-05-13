@@ -33,6 +33,10 @@ jobs:
         run: |
           poetry run pyright
 
+      - name: codespell
+        run: |
+          poetry run codespell
+
       - name: pytest
         run: |
           poetry run coverage run -m pytest
