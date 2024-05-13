@@ -1,3 +1,19 @@
+## v0.0.7 (2024-05-13)
+
+### 📝💡 Documentation
+
+- minor edits to main readme file
+
+### 🔐🚧📈✏️ 💩👽️🍻💬🥚🌱🚩🥅🩺 Others
+
+- formatting of first steps
+- fix changelog typos
+
+### 🧹 chore
+
+- minor rephrase
+- make documentation more clear both in root and template
+
 ## v0.0.6 (2024-05-13)
 
 ### 🐛🚑️ Fixes
