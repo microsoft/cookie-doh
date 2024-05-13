@@ -17,6 +17,7 @@ Once you've created your new repository, the creation process will tell you to:
     cd <project-folder>
     git init
     ```
+
 2. Configure upstream / remote repository:
 
     a. if you have an existing repository:
@@ -29,11 +30,13 @@ Once you've created your new repository, the creation process will tell you to:
     gh auth login
     gh repo create {{organization}}/{{project_name}} --private --remote=origin
     ```
+
 3. Install dependencies:
     ```bash
     poetry add <dependencies>
     poetry install
     ```
+
 4. Commit the initial files:
     ```bash
     git add .
@@ -41,6 +44,7 @@ Once you've created your new repository, the creation process will tell you to:
     git commit -m "init: initialize repo"
     git push -u origin main
     ```
+
 5. Happy coding! :rocket:
 
 
