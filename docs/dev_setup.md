@@ -27,6 +27,8 @@ eval "$(direnv hook bash)"  # add to current shell
 mkdir -p ~/.config/direnv/
 cp .devcontainer/direnvrc ~/.config/direnv/direnvrc
 ```
+When you enter the project folder, direnv will ask you to allow the `.envrc` file to be loaded.
+Allow it by running `direnv allow`.
 
 
 ### [Pyenv](https://github.com/pyenv/pyenv)

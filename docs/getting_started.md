@@ -86,7 +86,7 @@ run `poetry add <package>` to add a new dependency. Run `poetry update` to updat
 Poetry will create a `.venv` folder with a virtual environment inside your project (configurable
 with `poetry.toml`).
 * To run tests, use `poetry run pytest`, or if you use [_direnv_](https://github.com/direnv/direnv)
-and have enabled it, simply run `pytest`. See setting up your development environment below.
+and have [enabled](dev_setup.md#direnv) it, simply run `pytest`.
 * You will only get the `docs` folder if you enabled documentation builds in the _copier_ prompts.
 Add your markdown documentation to the `docs` folder and run `bin/serve-docs` to see a live preview
 (or `serve-docs` if you use _direnv_). Make changes to `.pages` to edit your navigation pane.
