@@ -5,9 +5,10 @@
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
------------------------------------------------------------------
 
-{{ project_name }} info
+<Write {{ project_name }} project info here!>
+
+-----------------------------------------------------------------
 
 {% if documentation -%}
 ## :notebook_with_decorative_cover: Documentation
@@ -17,31 +18,30 @@ https://{{ organization }}.github.io/{{ project_name }}
 https://github.com/{{ organization }}/{{ project_name }}
 {%- endif -%}
 
-### Optional system dependencies
 
-We use the following optional dependencies for development:
+## :rocket: Getting Started with {{ project_name }}
 
-* [direnv](https://direnv.net/): To manage environment variables and load python virtual environments automatically.
-* [pyenv](https://github.com/pyenv/pyenv): To manage python versions.
-* [pipx](https://pipxproject.github.io/pipx/): To install python packages in isolated environments.
-* [commitizen](https://commitizen-tools.github.io/commitizen/): To help with [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/).
-* [cz-conventional-gitmoji](https://github.com/ljnsn/cz-conventional-gitmoji): A commitizen plugin that combines gitmoji and conventional commits.
-* [pre-commit](https://pre-commit.com/): To run code formatting and linting before committing.
+<Write your getting started section.>
 
-### Required system dependencies
 
-* [poetry](https://python-poetry.org/): To manage package dependencies and virtual environments.
-* [python >= 3.10](https://www.python.org/)
+## :space_invader: Codespaces
 
-For setting up the development environment:
+We provide a configured devcontainer setup for you to use in in your new project and/or cookie-doh itself.
+You can use it to create a container image with all the necessary dependencies automatically,
+and use in a remote development environment with GitHub Codespaces or DevPod.
 
-* Clone the repository and cd into it.
-* Install the dependencies with poetry:
-```bash
-poetry install
-```
+Learn about [GitHub Codespaces](https://docs.github.com/en/codespaces) and/or [DevPod](https://devpod.sh/),
+and click below to clone or fork this repository automatically and start developing:
 
-### Devcontainer
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/{{organization}}/{{project_name}})
+
+[![Open in DevPod!](https://devpod.sh/assets/open-in-devpod.svg)](https://devpod.sh/open#https://github.com/{{organization}}/{{project_name}})
+
+
+## :gear: Devcontainer
+
+Alternatively, you can you can build a local container directly and use it in VSCode and/or
+PyCharm without developing in a remote node or setting up a local environment.
 
 Learn about [Devcontainers](https://containers.dev/).
 Requires [Docker](https://www.docker.com/get-started/) installed on your local machine.
@@ -50,15 +50,35 @@ Requires [Docker](https://www.docker.com/get-started/) installed on your local m
 and/or [PyCharm](https://www.jetbrains.com/help/pycharm/connect-to-devcontainer.html).
 
 
-### Codespaces
+## :computer: Local Development
 
-Learn about [GitHub Codespaces](https://docs.github.com/en/codespaces) and/or [DevPod](https://devpod.sh/).
+### Required system dependencies
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/{{ organization }}/{{ project_name }})
+* [python >= 3.10](https://www.python.org/)
+* [poetry](https://python-poetry.org/): To manage package dependencies and virtual environments.
 
-[![Open in DevPod!](https://devpod.sh/assets/open-in-devpod.svg)](https://devpod.sh/open#https://github.com/{{ organization }}/{{ project_name }})
+For setting up the development environment (both for your newly created project and cookie-doh)
 
+* cd into your repo.
+* Install the project dependencies with poetry:
+```bash
+poetry install
+```
 
+### Optional development setup
+
+We use the following (optional) dependencies for development.
+If you are going to set up a local development environment for your created project, or for cookie-doh
+itself, follow the local development setup [instructions](https://microsoft.github.io/cookie-doh/dev_setup).
+
+* [direnv](https://direnv.net/):  To load python virtual environments automatically and manage environment variables.
+* [pyenv](https://github.com/pyenv/pyenv): To manage python versions.
+* [pipx](https://pipxproject.github.io/pipx/): To install python packages in isolated environments.
+* [commitizen](https://commitizen-tools.github.io/commitizen/): To help with [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/).
+* [cz-conventional-gitmoji](https://github.com/ljnsn/cz-conventional-gitmoji): A commitizen plugin that combines [gitmoji](https://gitmoji.dev/) and conventional commits.
+* [pre-commit](https://pre-commit.com/): To run code formatting and linting before committing.
+* [copier](https://copier.readthedocs.io/en/stable/): To create new repositories from this template
+and update them with new changes.
 
 
 {% if organization == 'microsoft' %}

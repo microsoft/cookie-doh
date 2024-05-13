@@ -1,3 +1,5 @@
 nav:
-- ...
-- reference: api
+  - ...
+  - getting_started.md
+  - dev_setup.md
+  - reference: api

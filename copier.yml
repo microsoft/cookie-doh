@@ -84,17 +84,19 @@ _message_after_copy: |
 
   Next steps:
 
-  {% if repo_exists -%}
-
-  1. Pull repository into your newly created project:
+  1. Change directory and initialize GitHub:
 
      $ cd {{ _copier_conf.dst_path }}
      $ git init
+
+  {% if repo_exists -%}
+  2. Pull repository into your newly created project:
+
      $ git remote add origin https://github.com/{{ organization }}/{{ project_name }}.git
      $ git pull origin main  # and resolve any conflicts
 
   {% else -%}
-  1. Create a new repository on GitHub:
+  2. Create a new repository on GitHub:
 
     a. Install the GitHub CLI (if you haven't already): https://cli.github.com/
     b. Authenticate with GitHub and create the new repository:
@@ -105,15 +107,17 @@ _message_after_copy: |
 
   {% endif -%}
 
-  2. Add project dependencies to `pyproject.toml` and install them with Poetry:
+  3. Add project dependencies to `pyproject.toml` and install them with Poetry:
 
      $ poetry add <new-dependencies>  # optional
      $ poetry install
 
-  3. Add the project outputs, configure pre-commit and commit your changes:
+  4. Add the project outputs, configure pre-commit and commit your changes:
 
      $ git add .
+     {% if precommit -%}
      $ pre-commit install --install-hooks
+     {% endif -%}
      $ git commit -m "init: initialize repo"
 
   5. Happy coding! 🚀
