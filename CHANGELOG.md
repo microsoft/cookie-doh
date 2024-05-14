@@ -1,3 +1,9 @@
+## v0.0.8 (2024-05-14)
+
+### 📝💡 Documentation
+
+- update readme files
+
 ## v0.0.7 (2024-05-13)
 
 ### 📝💡 Documentation
