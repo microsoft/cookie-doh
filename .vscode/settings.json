@@ -37,6 +37,7 @@
     },
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
+    "jupyter.notebookFileRoot": "${workspaceFolder}",
     "markdown.validate.enabled": true,
     "notebook.formatOnSave.enabled": true,
     "notebook.codeActionsOnSave": {
