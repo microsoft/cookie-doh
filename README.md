@@ -53,9 +53,9 @@ or [DevPod](https://devpod.sh/).
 
 :point_right: Click below to clone or fork this repository automatically and start developing:
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/{{organization}}/{{project_name}})
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/microsoft/cookie-doh)
 
-[![Open in DevPod!](https://devpod.sh/assets/open-in-devpod.svg)](https://devpod.sh/open#https://github.com/{{organization}}/{{project_name}})
+[![Open in DevPod!](https://devpod.sh/assets/open-in-devpod.svg)](https://devpod.sh/open#https://github.com/microsoft/cookie-doh)
 
 
 ## :gear: Devcontainer
