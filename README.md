@@ -7,15 +7,19 @@
 
 Cookie-doh is a repository template for creating single Python package projects that include pre-configured development tools.
 
-:seedling: Improve your development workflow, validity and readability of code for individual & collaborative projects!
 
-:tropical_drink: Takes less than a minute to create a new project!
+## :woman_shrugging: Why should I care?
+
+* :seedling: Improve your development workflow, validity and readability of code for individual & collaborative projects!
+
+* :tropical_drink: Takes less than a minute to create a fully pre-configured project!
 
 :link: Short-link: [https://aka.ms/cookie-doh]()
 
 :star: Star this repo to show your support!
 
 -----------------------------------------------------------------
+
 
 ## :rocket: Getting Started with cookie-doh
 
