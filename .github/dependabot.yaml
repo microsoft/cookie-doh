@@ -16,7 +16,7 @@ updates:
   - package-ecosystem: pip
     directory: "/" # location of package manifests
     schedule:
-      interval: monthly
+      interval: weekly
     target-branch: main
     groups:
       package-dependencies:
