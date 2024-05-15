@@ -4,7 +4,14 @@
  you don't need to set up a local development environment.
  But otherwise, follow these steps to set up some useful utilities.
 
+Check the [minimum required dependencies](#minimum-required-dependencies) and install the tools you need.
+
 ## :penguin: Linux/WSL instructions
+
+### Minimum required dependencies:
+
+  * [python >= 3.10](https://www.python.org/downloads/): we recommend installing python via [pyenv](#pyenv).
+  * [poetry](https://python-poetry.org/docs/#installation): we recommend installing [poetry](#poetry) with [pipx](#pipx).
 
 
 ### [Direnv](https://direnv.net/)

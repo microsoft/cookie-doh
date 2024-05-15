@@ -82,11 +82,17 @@ _exclude:
 _message_after_copy: |
   Your project "{{ project_name }}" has been created successfully! 🎉
 
+  Required dependencies:
+  * Make sure you have `python >= 3.10` and `poetry` installed.
+  * Instructions: https://microsoft.github.io/cookie-doh/dev_setup
+  * You can also install optional tools like `direnv` and `pre-commit` following the link above
+  if needed for your project.
+
   Next steps:
 
   1. Change directory and initialize GitHub:
 
-     $ cd {{ _copier_conf.dst_path }}
+     $ cd {{ _copier_conf.dst_path }}  # direnv will ask you to type `direnv allow` (if you have direnv installed)
      $ git init
 
   {% if repo_exists -%}
@@ -102,7 +108,7 @@ _message_after_copy: |
     b. Authenticate with GitHub and create the new repository:
 
        $ gh auth login
-       $ gh repo create {{ organization }}/{{ project_name }} --private --remote=origin
+       $ gh repo create {{ organization }}/{{ project_name }} --private --source=. --remote=origin
        $ cd {{ _copier_conf.dst_path }}
 
   {% endif -%}
