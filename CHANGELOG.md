@@ -1,3 +1,23 @@
+## v0.0.9 (2024-05-15)
+
+### 🐛🚑️ Fixes
+
+- codespaces and devpod readme link
+
+### 💚👷 CI & Build
+
+- make dependabot run weekly as compliance requests
+
+### 📝💡 Documentation
+
+- add clarifications on required tools when creating a project
+- minor readme edit
+
+### 🔧🔨📦️ Configuration, Scripts, Packages
+
+- **gitignore**: exclude wandb log folders
+- add jupyter default workspace directory to the root
+
 ## v0.0.8 (2024-05-14)
 
 ### 📝💡 Documentation
