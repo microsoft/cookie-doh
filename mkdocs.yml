@@ -34,9 +34,11 @@ theme:
     - navigation.instant
     - navigation.instant.prefetch
     - navigation.path
-    - content.code.copy
-    - toc.follow
+    - navigation.indexes
+    - navigation.sections
     - navigation.top
+    - content.code.copy
+    - search.suggest
 extra_css:
   - css/extra.css
 # removed because of codeql detection
