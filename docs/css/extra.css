@@ -11,3 +11,12 @@
     /* Set your desired background color */
     color: grey;
 }
+
+#left_copyright {
+    float: left;
+    width: 300px;
+}
+
+#center_copyright {
+    margin-left: 300px;
+}

@@ -23,7 +23,7 @@ Cookie-doh is a repository template for creating single Python package projects 
 -----------------------------------------------------------------
 
 
-## :rocket: Getting Started with cookie-doh
+## :rocket: Getting started with cookie-doh
 
 This template uses [_copier_](https://github.com/copier-org/copier) to create new repositories.
 If you don't have _copier_, follow the [installation instructions](https://copier.readthedocs.io/en/stable/#installation).
@@ -74,7 +74,7 @@ Requires [Docker](https://www.docker.com/get-started/) installed on your local m
 and/or [PyCharm](https://www.jetbrains.com/help/pycharm/connect-to-devcontainer.html).
 
 
-## :computer: Local Development
+## :computer: Local development
 
 The only required system dependencies are [python >= 3.10](https://www.python.org/) and
 [poetry](https://python-poetry.org/).
@@ -128,3 +128,8 @@ trademarks or logos is subject to and must follow
 [Microsoft's Trademark & Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general).
 Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship.
 Any use of third-party trademarks or logos are subject to those third-party's policies.
+
+
+## :lock: Privacy & Cookies
+
+[Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839).
