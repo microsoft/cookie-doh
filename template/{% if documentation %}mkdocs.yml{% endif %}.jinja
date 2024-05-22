@@ -34,9 +34,12 @@ theme:
     - navigation.instant
     - navigation.instant.prefetch
     - navigation.path
-    - content.code.copy
-    - toc.follow
+    - navigation.indexes
+    - navigation.sections
     - navigation.top
+    - navigation.footer
+    - content.code.copy
+    - search.suggest
 extra_css:
   - css/extra.css
 # removed because of codeql detection
@@ -84,3 +87,10 @@ markdown_extensions:
   # Needed because sphinx is generating lists with 2 spaces which is not supported by mkdocs
   # See: https://github.com/mkdocs/mkdocs/issues/545
   - mdx_truly_sane_lists
+{% if microsoft_internal -%}
+copyright: |
+  <div id="left_copyright"><span style="color: grey;">Made with <a href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs</a></div>
+  <div id="center_copyright"><a href="https://opensource.microsoft.com/codeofconduct/">Code of Conduct</a> | <a href="https://go.microsoft.com/fwlink/?LinkId=506942">Trademarks</a> | <a href="https://go.microsoft.com/fwlink/?LinkId=521839">Privacy & Cookies</a></div>
+extra:
+  generator: false
+{%- endif %}
