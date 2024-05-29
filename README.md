@@ -43,9 +43,9 @@ Minimum required system dependencies are [python >= 3.10](https://www.python.org
 
 Visit the documentation:
 
-https://microsoft.github.io/cookie-doh
+https://microsoft.github.io/cookie-doh/
 
-:point_right: Go to [new project](https://microsoft.github.io/cookie-doh/getting_started) to get started!
+:point_right: Go to [new project](https://microsoft.github.io/cookie-doh/getting_started/) to get started!
 
 
 ## :space_invader: Codespaces
@@ -67,7 +67,7 @@ or [DevPod](https://devpod.sh/).
 Alternatively, you can build a local container directly and use it in VSCode and/or
 PyCharm without developing in a remote node or setting up a local environment.
 
-Learn about [Devcontainers](https://containers.dev/).
+Learn about [Devcontainers](https://containers.dev).
 Requires [Docker](https://www.docker.com/get-started/) installed on your local machine.
 
 :point_right: Follow instructions for [VSCode](https://code.visualstudio.com/docs/devcontainers/tutorial)
