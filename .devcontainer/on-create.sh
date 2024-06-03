@@ -26,4 +26,8 @@ direnv allow .
 poetry install
 
 echo "CONFIGURING PRE-COMMIT"
+if [ ! -d .git ]; then
+    echo "Initializing Git..."
+    git init
+fi
 pre-commit install --install-hooks
