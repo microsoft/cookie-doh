@@ -1,3 +1,23 @@
+## v0.0.10 (2024-06-03)
+
+### 📌➕⬇️ ➖⬆️  Dependencies
+
+- **devcontainer**: add nvidia drivers to devcontainer
+
+### 📝💡 Documentation
+
+- fix docs url ending in slash
+- fix footer for being compliant
+- add copyright notice to template if microsoft_internal
+-  add footer with code of conduct, trademarks and privacy links
+- add poetry reference to intro description
+- fix some accessibility issues: links not being underlined and contrast of copyright notice
+
+### 🔧🔨📦️ Configuration, Scripts, Packages
+
+- **devcontainer**: check if git has been initialized in devcontainer script before initializing pre-commit
+- **devcontainer**: move direnvrc file from cwd rather than project name
+
 ## v0.0.9 (2024-05-15)
 
 ### 🐛🚑️ Fixes
