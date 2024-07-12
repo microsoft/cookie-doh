@@ -1,3 +1,13 @@
+## v0.0.11 (2024-07-12)
+
+### 📌➕⬇️ ➖⬆️  Dependencies
+
+- update dependencies
+
+### 📝💡 Documentation
+
+- **accessibility**: fix accessibility errors on code snippet comments
+
 ## v0.0.10 (2024-06-03)
 
 ### 📌➕⬇️ ➖⬆️  Dependencies
