@@ -12,6 +12,11 @@
     color: grey;
 }
 
+.c1 {
+    /* comment background color for accessibility */
+    background-color: white;
+}
+
 #left_copyright {
     float: left;
     width: 250px;
