@@ -19,7 +19,12 @@ updates:
       interval: weekly
     target-branch: main
     groups:
-      package-dependencies:
+      security-packages:
+        applies-to: security-updates
+        patterns:
+          - "*"
+      dependencie-packages:
+        applies-to: version-updates
         patterns:
           - "*"
     commit-message:
