@@ -23,7 +23,7 @@ updates:
         applies-to: security-updates
         patterns:
           - "*"
-      dependencie-packages:
+      dependency-packages:
         applies-to: version-updates
         patterns:
           - "*"
