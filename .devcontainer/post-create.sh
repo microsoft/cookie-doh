@@ -2,7 +2,7 @@
 # this runs ONCE after the container is created, and runs in the user's context inside the container
 # ===========================
 
-git config -–global core.editor "nano"
+git config --global core.editor "nano"
 git config --global pager.branch false
 git config --global alias.ba branch
 git config --global alias.co checkout
