@@ -17,8 +17,8 @@ pip install --upgrade pip
 echo "INSTALLING COMMITIZEN"
 pipx install commitizen
 pipx inject commitizen cz-conventional-gitmoji
-echo 'eval "$(register-python-argcomplete cz)"' >> ~/.bashrc
-echo 'eval "$(register-python-argcomplete cz)"' >> ~/.zshrc
+echo 'eval "$(register-python-argcomplete3 cz)"' >> ~/.bashrc
+echo 'eval "$(register-python-argcomplete3 cz)"' >> ~/.zshrc
 
 echo "POETRY INSTALL"
 poetry config virtualenvs.in-project true
