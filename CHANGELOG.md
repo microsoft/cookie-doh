@@ -1,3 +1,36 @@
+## v0.0.12 (2024-07-25)
+
+### ✨ Features
+
+- add autocompletion for poetry in zsh
+- remake the devcontainer with dockerfile
+- install azure-cli gh and docker to devcontainer
+- add docker build support
+
+### 🐛🚑️ Fixes
+
+- **devcontainer**: fix typo in post-create.sh devcontainer script
+
+### 💚👷 CI & Build
+
+- **dependabot**: group security updates of dependabot
+
+### 📝💡 Documentation
+
+- fix typo on curl install
+
+### 🔐🚧📈✏️ 💩👽️🍻💬🥚🌱🚩🥅🩺 Others
+
+- fix typo in dependabot.yaml
+
+### 🔧🔨📦️ Configuration, Scripts, Packages
+
+- change default config values of copier
+
+### 🩹 fix-simple
+
+- **devcontainer**: use register-python-argcomplete3 rather than register-python-argcomplete
+
 ## v0.0.11 (2024-07-12)
 
 ### 📌➕⬇️ ➖⬆️  Dependencies
