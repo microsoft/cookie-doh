@@ -28,21 +28,21 @@ documentation:
   help: |
     Do you want to include documentation in your project?
     This will add a `docs` directory with a basic `sphinx` setup and CI builds.
-  default: true
+  default: false
 
 precommit:
   type: bool
   help: |
     Do you want to include pre-commit hooks in your project?
     This will add a `.pre-commit-config.yaml` file with some basic hooks.
-  default: true
+  default: false
 
 commitizen:
   type: bool
   help: |
     Do you want to include commitizen in your project?
     This will add a `.cz.toml` file and `commitizen` hooks to .pre-commit-config.yaml (if used).
-  default: true
+  default: false
 
 microsoft_internal:
   type: bool
