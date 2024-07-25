@@ -20,6 +20,9 @@ echo 'eval "$(register-python-argcomplete3 cz)"' >> ~/.zshrc
 echo "POETRY INSTALL"
 pipx install poetry
 poetry completions bash >> ~/.bash_completion
+mkdir $ZSH_CUSTOM/plugins/poetry
+poetry completions zsh > $ZSH_CUSTOM/plugins/poetry/_poetry
+sed -i 's/plugins=(git)/plugins=(git poetry)/' ~/.zshrc
 poetry config virtualenvs.in-project true
 direnv allow .
 poetry env remove --all
