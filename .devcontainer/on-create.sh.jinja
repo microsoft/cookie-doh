@@ -1,18 +1,15 @@
 #! /bin/bash
-# this runs ONCE at devcontainer creation time, and it runs during pre-build phase which
-# means it does not have access to user context
-# ===========================
 
-# finish config of direnv settings (would be nice to improve the devcontainer "feature")
 echo "CONFIGURING DIRENV..."
 echo 'eval "$(direnv hook bash)"' >> ~/.bashrc
 echo 'eval "$(direnv hook zsh)"' >> ~/.zshrc
 eval "$(direnv hook bash)"
 mkdir -p ~/.config/direnv/
 cp /workspaces/$(basename "$(pwd)")/.devcontainer/direnvrc ~/.config/direnv/direnvrc
+pipx ensurepath
 
 echo "UPDATE PIP"
-pip install --upgrade pip
+pip3 install -U pip
 
 {% if commitizen -%}
 echo "INSTALLING COMMITIZEN"
@@ -23,8 +20,11 @@ echo 'eval "$(register-python-argcomplete3 cz)"' >> ~/.zshrc
 {%- endif %}
 
 echo "POETRY INSTALL"
+pipx install poetry
+poetry completions bash >> ~/.bash_completion
 poetry config virtualenvs.in-project true
 direnv allow .
+poetry env remove --all
 poetry install
 
 {% if precommit -%}
@@ -33,5 +33,6 @@ if [ ! -d .git ]; then
     echo "Initializing Git..."
     git init
 fi
+pipx install pre-commit
 pre-commit install --install-hooks
 {%- endif %}

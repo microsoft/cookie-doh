@@ -1,8 +1,7 @@
 {
     "build": {
-        "dockerfile": "../Dockerfile",
-        "context": "..",
-        "target": "devcontainer"
+        "dockerfile": "Dockerfile",
+        "context": ".."
     },
     "features": {
         "ghcr.io/devcontainers/features/common-utils": {
