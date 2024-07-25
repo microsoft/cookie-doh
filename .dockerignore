@@ -11,7 +11,7 @@
 **/*.pyc
 
 **/src/*.egg-info
-**/build/
+**/build
 **/dist
 
 .git
