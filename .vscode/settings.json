@@ -61,6 +61,7 @@
     ],
     "python.testing.unittestEnabled": false,
     "python.testing.pytestEnabled": true,
+    "scm.experimental.showHistoryGraph": true,
     "search.exclude": {
         "**/build": true,
         "**/.tmp": true,

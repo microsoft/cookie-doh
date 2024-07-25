@@ -3,7 +3,6 @@
 # means it does not have access to user context
 # ===========================
 
-# finish config of direnv settings (would be nice to improve the devcontainer "feature")
 echo "CONFIGURING DIRENV..."
 echo 'eval "$(direnv hook bash)"' >> ~/.bashrc
 echo 'eval "$(direnv hook zsh)"' >> ~/.zshrc
@@ -30,4 +29,5 @@ if [ ! -d .git ]; then
     echo "Initializing Git..."
     git init
 fi
+pipx install pre-commit
 pre-commit install --install-hooks
