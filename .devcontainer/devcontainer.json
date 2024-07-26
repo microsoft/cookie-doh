@@ -4,6 +4,7 @@
         "context": ".."
     },
     "features": {
+        "ghcr.io/devcontainers/features/docker-in-docker": {},
         "ghcr.io/devcontainers/features/common-utils": {
             "configureZshAsDefaultShell": true
         }
