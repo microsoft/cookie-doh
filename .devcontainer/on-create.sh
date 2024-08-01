@@ -1,4 +1,6 @@
 #! /bin/bash
+echo "CONFIGURING ROOTLESS DOCKER"
+sudo chown root:docker /var/run/docker.sock
 
 echo "CONFIGURING DIRENV..."
 echo 'eval "$(direnv hook bash)"' >> ~/.bashrc
