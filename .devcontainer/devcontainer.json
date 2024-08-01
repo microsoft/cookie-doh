@@ -4,17 +4,28 @@
         "context": ".."
     },
     "features": {
-        "ghcr.io/devcontainers/features/docker-in-docker": {},
         "ghcr.io/devcontainers/features/common-utils": {
             "configureZshAsDefaultShell": true
         }
     },
     "onCreateCommand": ".devcontainer/on-create.sh",
     "postCreateCommand": ".devcontainer/post-create.sh",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/${localWorkspaceFolderBasename},type=bind,consistency=cached",
+    "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
     "remoteEnv": {
         "WANDB_API_KEY": "${localEnv:WANDB_API_KEY}",
         "WANDB_BASE_URL": "${localEnv:WANDB_BASE_URL}"
     },
+    "mounts": [
+        "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
+    ],
+    "hostRequirements": {
+        "gpu": "optional"
+    },
+    "runArgs": [
+        "--add-host=host.docker.internal:host-gateway"
+        // "--gpus=all"  // may need to add this if you want to use the host's GPU
+    ],
     "customizations": {
         "vscode": {
             "extensions": [
