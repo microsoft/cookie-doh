@@ -24,5 +24,5 @@ echo "RUNNING PYTEST AND COVERAGE"
 poetry run coverage run -m pytest
 
 echo
-echo "BUILDING API AND MARKDOWN DOCS"
+echo "BUILDING DOCS"
 build-docs

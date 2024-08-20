@@ -3,4 +3,4 @@ nav:
   - getting_started.md
   - repo_structure.md
   - dev_setup.md
-  - reference: api
+  - reference.md
