@@ -2,7 +2,7 @@ name: pr
 
 on:
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -24,4 +24,5 @@ jobs:
     permissions:
       contents: read
       actions: read
+      checks: write
       security-events: write
