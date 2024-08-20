@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 set -e
 
-bin/docs-api
 poetry run mkdocs serve

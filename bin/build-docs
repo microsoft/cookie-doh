@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 set -e
 
-bin/docs-api
 rm -rf dist/site
 poetry run mkdocs build --site-dir=dist/site
