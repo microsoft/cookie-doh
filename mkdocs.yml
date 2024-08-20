@@ -50,6 +50,25 @@ extra_css:
 #  - js/tex-mml-chtml.js
 plugins:
   - search
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          paths: [src]
+          options:
+            show_inheritance_diagram: true
+            show_if_no_docstring: true
+            show_symbol_type_toc: true
+            show_symbol_type_heading: true
+            show_signature_annotations: true
+            show_submodules: true
+            show_source: true
+            group_by_category: false
+            show_category_heading: true
+            docstring_options:
+              ignore_init_summary: false
+              merge_init_into_class: true
+              separate_signature: true
   - awesome-pages
   - mkdocs-video:
       is_video: true
@@ -84,9 +103,6 @@ markdown_extensions:
   # https://github.com/microsoft/cookie-doh/security/code-scanning/4
   #  - pymdownx.arithmatex:
   #      generic: true
-  # Needed because sphinx is generating lists with 2 spaces which is not supported by mkdocs
-  # See: https://github.com/mkdocs/mkdocs/issues/545
-  - mdx_truly_sane_lists
 copyright: |
   <div id="left_copyright"><span style="color: grey;">Made with <a href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs</a></div>
   <div id="center_copyright"><a href="https://go.microsoft.com/fwlink/?LinkId=521839">Privacy & Cookies</a> | <a href="https://go.microsoft.com/fwlink/?linkid=2259814">Consumer Health Privacy</a> | <a href="https://www.microsoft.com/trademarks">Trademarks</a> | <a href="https://go.microsoft.com/fwlink/?LinkID=206977">Terms of use</a> | © 2024 Microsoft</div>
