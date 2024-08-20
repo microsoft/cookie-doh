@@ -25,4 +25,5 @@ jobs:
       contents: read
       actions: read
       checks: write
+      id-token: write
       security-events: write
