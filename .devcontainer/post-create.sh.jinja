@@ -11,12 +11,15 @@ git config --global alias.cp cherry-pick
 git config --global alias.mt mergetool
 git config --global alias.pl pull --rebase
 
+{% if commitizen -%}
 echo "INSTALLING COMMITIZEN"
 pipx install commitizen
 pipx inject commitizen cz-conventional-gitmoji
 echo 'eval "$(register-python-argcomplete3 cz)"' >> ~/.bashrc
 echo 'eval "$(register-python-argcomplete3 cz)"' >> ~/.zshrc
+{%- endif %}
 
+{% if precommit -%}
 echo "CONFIGURING PRE-COMMIT"
 if [ ! -d .git ]; then
     echo "Initializing Git..."
@@ -24,3 +27,4 @@ if [ ! -d .git ]; then
 fi
 pipx install pre-commit
 pre-commit install --install-hooks
+{%- endif %}

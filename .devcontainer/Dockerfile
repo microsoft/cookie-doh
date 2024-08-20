@@ -41,6 +41,7 @@ RUN groupadd --gid $USER_GID $USERNAME \
     && echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME \
     && chmod 0440 /etc/sudoers.d/$USERNAME \
     && groupadd docker \
-    && usermod -aG docker $USERNAME
-
-USER $USERNAME
+    && usermod -aG docker $USERNAME \
+    && echo '#!/usr/bin/env bash\nchown root:docker /var/run/docker.sock' > /usr/local/share/docker-init.sh \
+    && chmod +x /usr/local/share/docker-init.sh \
+    && chown ${USERNAME}:root /usr/local/share/docker-init.sh

@@ -10,12 +10,19 @@
     },
     "onCreateCommand": ".devcontainer/on-create.sh",
     "postCreateCommand": ".devcontainer/post-create.sh",
+    "postStartCommand": {
+        "rootless-docker": [
+            "sudo",
+            "/usr/local/share/docker-init.sh"
+        ]
+    },
     "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/${localWorkspaceFolderBasename},type=bind,consistency=cached",
     "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
     "remoteEnv": {
         "WANDB_API_KEY": "${localEnv:WANDB_API_KEY}",
         "WANDB_BASE_URL": "${localEnv:WANDB_BASE_URL}"
     },
+    "remoteUser": "vscode",
     "mounts": [
         "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
     ],
@@ -30,8 +37,9 @@
         "vscode": {
             "extensions": [
                 "ms-python.python",
-                "ms-python.vscode-pylance",
                 "ms-python.debugpy",
+                "ms-python.vscode-pylance",
+                "ms-azuretools.vscode-docker",
                 "ms-toolsai.jupyter",
                 "charliermarsh.ruff",
                 "eamodio.gitlens",
