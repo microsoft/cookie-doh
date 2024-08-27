@@ -1,3 +1,25 @@
+## v0.0.13 (2024-08-27)
+
+### ✨ Features
+
+- add mkdocstrings and remove sphinx from docs builds
+- rootless docker in devcontainer
+- add missing docker configuration
+- install docker from docker directly
+
+### 🐛🚑️ Fixes
+
+- wrong jinja code in readme
+- docker-in-docker in devcontainer
+
+### 🔧🔨📦️ Configuration, Scripts, Packages
+
+- some settings updates
+
+### 🧹 chore
+
+- cleanup unnecessary ignore
+
 ## v0.0.12 (2024-07-25)
 
 ### ✨ Features
