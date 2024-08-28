@@ -20,15 +20,13 @@ pyright = "*"
 pytest = "*"
 {% if documentation %}
 [tool.poetry.group.docs.dependencies]
-mdx-truly-sane-lists = "*"
 mkdocs = "*"
 mkdocs-awesome-pages-plugin = "*"
 mkdocs-material = "*"
 mkdocs-video = "*"
+mkdocstrings = "*"
+mkdocstrings-python = "*"
 pymdown-extensions = "*"
-sphinx = "*"
-sphinx-autodoc-typehints = "*"
-sphinx-markdown-builder = "*"
 {% endif %}
 [build-system]
 requires = ["poetry-core"]
