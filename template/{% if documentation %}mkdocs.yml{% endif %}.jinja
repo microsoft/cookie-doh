@@ -50,6 +50,25 @@ extra_css:
 #  - js/tex-mml-chtml.js
 plugins:
   - search
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          paths: [src]
+          options:
+            show_inheritance_diagram: true
+            show_if_no_docstring: true
+            show_symbol_type_toc: true
+            show_symbol_type_heading: true
+            show_signature_annotations: true
+            show_submodules: true
+            show_source: true
+            group_by_category: false
+            show_category_heading: true
+            docstring_options:
+              ignore_init_summary: false
+              merge_init_into_class: true
+              separate_signature: true
   - awesome-pages
   - mkdocs-video:
       is_video: true
