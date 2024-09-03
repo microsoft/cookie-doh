@@ -10,6 +10,9 @@
 # ignore the distribution/publishing folder
 **/dist
 
+# ignore data folder
+**/data
+
 # ignore personal workspace files
 **/.vscode/*
 !**/.vscode/extensions.json
