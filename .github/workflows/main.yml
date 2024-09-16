@@ -32,6 +32,7 @@ jobs:
     permissions:
       contents: read
       actions: write
+      id-token: write
 
   codeql:
     uses: ./.github/workflows/codeql.yml
