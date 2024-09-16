@@ -17,7 +17,7 @@ jobs:
     uses: ./.github/workflows/run-tests.yml
 {% if documentation %}
   build-docs:
-    uses: ./.github/workflows/build-docs.yml
+    uses: ./.github/workflows/docs.yml
 {% endif %}
   codeql:
     uses: ./.github/workflows/codeql.yml

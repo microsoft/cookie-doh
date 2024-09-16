@@ -19,8 +19,8 @@ jobs:
   run-tests:
     uses: ./.github/workflows/run-tests.yml
 {% if documentation %}
-  build-docs:
-    uses: ./.github/workflows/build-docs.yml
+  docs:
+    uses: ./.github/workflows/docs.yml
     secrets: inherit
     permissions:
       contents: read
