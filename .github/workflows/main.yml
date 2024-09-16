@@ -18,16 +18,16 @@ jobs:
   run-tests:
     uses: ./.github/workflows/run-tests.yml
 
-  build-docs:
-    uses: ./.github/workflows/build-docs.yml
+  docs:
+    uses: ./.github/workflows/docs.yml
     secrets: inherit
     permissions:
       contents: read
       pages: write
       id-token: write
 
-  build-wheels:
-    uses: ./.github/workflows/build-wheels.yml
+  wheels:
+    uses: ./.github/workflows/wheels.yml
     secrets: inherit
     permissions:
       contents: read
