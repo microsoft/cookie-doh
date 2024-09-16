@@ -7,8 +7,6 @@ jobs:
   build-wheels:
     runs-on: ubuntu-latest
     name: build-wheels
-    strategy:
-      fail-fast: false
     steps:
       - uses: actions/checkout@v4
 
@@ -31,3 +29,26 @@ jobs:
         with:
           name: wheels
           path: "dist/*.whl"
+
+  publish-wheels:
+    needs: [build-wheels]
+    runs-on: ubuntu-latest
+    name: publish-wheels
+    if: github.ref_name == 'main'
+    environment:
+      name: pypi
+      url: https://pypi.org/p/cookie-doh
+    permissions:
+      id-token: write
+    steps:
+      - name: download-wheels
+        uses: actions/download-artifact@v4
+        with:
+          name: wheels
+          path: dist/
+
+      - name: publish-wheels
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          user: __token__
+          password: ${{ secrets.PYPI_API_TOKEN }}
