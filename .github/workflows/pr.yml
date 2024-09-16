@@ -18,6 +18,9 @@ jobs:
   build-docs:
     uses: ./.github/workflows/build-docs.yml
 
+  build-wheels:
+    uses: ./.github/workflows/build-wheels.yml
+
   codeql:
     uses: ./.github/workflows/codeql.yml
     secrets: inherit
