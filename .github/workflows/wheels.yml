@@ -1,4 +1,4 @@
-name: build-wheels
+name: wheels
 
 on:
   workflow_call:

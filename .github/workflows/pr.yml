@@ -16,10 +16,10 @@ jobs:
     uses: ./.github/workflows/run-tests.yml
 
   build-docs:
-    uses: ./.github/workflows/build-docs.yml
+    uses: ./.github/workflows/docs.yml
 
   build-wheels:
-    uses: ./.github/workflows/build-wheels.yml
+    uses: ./.github/workflows/wheels.yml
 
   codeql:
     uses: ./.github/workflows/codeql.yml
