@@ -13,10 +13,7 @@
             "purpose": [
                 "debug-test"
             ],
-            "console": "integratedTerminal",
-            "env": {
-                "PYTEST_ADDOPTS": "--no-cov"
-            } // https://github.com/microsoft/vscode-python/issues/693#issuecomment-926591721
+            "console": "integratedTerminal"
         }
     ]
 }
