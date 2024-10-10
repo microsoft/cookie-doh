@@ -36,6 +36,7 @@
     },
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
+    "github.experimental.multipleAccounts": true,
     "markdown.validate.enabled": true,
     "notebook.formatOnSave.enabled": true,
     "notebook.codeActionsOnSave": {
@@ -47,10 +48,11 @@
         "${workspaceFolder}/src"
     ],
     "python.analysis.inlayHints.pytestParameters": true,
+    "python.analysis.languageServerMode": "default",
     "python.defaultInterpreterPath": ".venv/bin/python",
     "python.envFile": "${workspaceFolder}/.envrc",
     "python.languageServer": "Pylance",
-    "python.locator": "native",
+    "python.terminal.shellIntegration.enabled": true,
     "python.testing.pytestArgs": [
         "test"
     ],
