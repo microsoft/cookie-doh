@@ -22,6 +22,7 @@ pytest = "*"
 [tool.poetry.group.docs.dependencies]
 mkdocs = "*"
 mkdocs-awesome-pages-plugin = "*"
+mkdocs-git-revision-date-localized-plugin = "*"
 mkdocs-material = "*"
 mkdocs-video = "*"
 mkdocstrings = "*"
