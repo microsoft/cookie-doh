@@ -1,11 +1,14 @@
-site_name: "cookie-doh"
+site_name: cookie-doh
 repo_url: https://github.com/microsoft/cookie-doh
-repo_name: "cookie-doh"
+edit_uri: edit/main/docs/
+repo_name: cookie-doh
 docs_dir: docs
 theme:
   name: material
   logo: images/logo.png
   favicon: images/favicon.ico
+  icon:
+    repo: fontawesome/brands/github
   palette:
     # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
@@ -26,8 +29,6 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
-  icon:
-    repo: fontawesome/brands/github-alt
   features:
     - navigation.sections
     - navigation.expand
@@ -40,6 +41,7 @@ theme:
     - navigation.footer
     - content.code.copy
     - search.suggest
+    - content.action.edit
 extra_css:
   - css/extra.css
 # removed because of codeql detection
@@ -70,9 +72,14 @@ plugins:
               merge_init_into_class: true
               separate_signature: true
   - awesome-pages
-  - mkdocs-video:
-      is_video: true
-      video_controls: true
+  - git-revision-date-localized:
+      enable_creation_date: true
+  # - mkdocs-video:
+  #     is_video: true
+  #     video_controls: true
+  # - git-committers:
+  #     repository: microsoft/cookie-doh
+  #     branch: main
 markdown_extensions:
   # Allows for nicely styled notes and warnings: !!! note
   - admonition
@@ -103,8 +110,8 @@ markdown_extensions:
   # https://github.com/microsoft/cookie-doh/security/code-scanning/4
   #  - pymdownx.arithmatex:
   #      generic: true
-copyright: |
-  <div id="left_copyright"><span style="color: grey;">Made with <a href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs</a></div>
-  <div id="center_copyright"><a href="https://go.microsoft.com/fwlink/?LinkId=521839">Privacy & Cookies</a> | <a href="https://go.microsoft.com/fwlink/?linkid=2259814">Consumer Health Privacy</a> | <a href="https://www.microsoft.com/trademarks">Trademarks</a> | <a href="https://go.microsoft.com/fwlink/?LinkID=206977">Terms of use</a> | © 2024 Microsoft</div>
+# copyright: |
+#   <div id="left_copyright"><span style="color: grey;">Made with <a href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs</a></div>
+#   <div id="center_copyright"><a href="https://go.microsoft.com/fwlink/?LinkId=521839">Privacy & Cookies</a> | <a href="https://go.microsoft.com/fwlink/?linkid=2259814">Consumer Health Privacy</a> | <a href="https://www.microsoft.com/trademarks">Trademarks</a> | <a href="https://go.microsoft.com/fwlink/?LinkID=206977">Terms of use</a> | © 2024 Microsoft</div>
 extra:
   generator: false
