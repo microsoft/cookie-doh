@@ -8,7 +8,7 @@
 
 ### 🐛🚑️ Fixes
 
-- **template**: some symlinks are not bein converted after creating a project
+- **template**: some symlinks are not being converted after creating a project
 - broken symlinks
 - permission not propagated
 - fix wheel location to upload
