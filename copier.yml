@@ -27,7 +27,7 @@ documentation:
   type: bool
   help: |
     Do you want to include documentation in your project?
-    This will add a `docs` directory with a basic `sphinx` setup and CI builds.
+    This will add a `docs` directory with mkdocs setup and CI builds.
   default: false
 
 precommit:
