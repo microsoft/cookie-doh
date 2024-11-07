@@ -1,3 +1,43 @@
+## v0.0.14 (2024-11-07)
+
+### ✨ Features
+
+- publish wheels
+- publish wheels
+- git ignore data folder
+
+### 🐛🚑️ Fixes
+
+- **template**: some symlinks are not bein converted after creating a project
+- broken symlinks
+- permission not propagated
+- fix wheel location to upload
+- add missing plugin to mkdocs.yml
+- remove unnecessary sphinx dependencies from template and update packages
+
+### 🔒️ Security
+
+- **pages**: undo previous change because it did not fix anything
+- **docs**: attempt to add secure headers to github pages
+
+### 🎨🏗️ Style & Architecture
+
+- rename some workflows
+
+### 💚👷 CI & Build
+
+- stop publishing wheels
+
+### 🔧🔨📦️ Configuration, Scripts, Packages
+
+- remove some icons in docs to try to enforce hsts headers
+- pytest in vscode now supports coverage
+- remove unused settings
+
+### 🧑‍💻 Developer Experience
+
+- update vscode settings with latest updates
+
 ## v0.0.13 (2024-08-27)
 
 ### ✨ Features
