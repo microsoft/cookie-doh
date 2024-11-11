@@ -1,3 +1,22 @@
+## v0.0.15 (2024-11-11)
+
+### ✨ Features
+
+- add automerge capabilities to dependabot of minor and patch updates
+- **dependabot**: add automerge of dependabot prs if all checks pass
+
+### 🎨🏗️ Style & Architecture
+
+- **symlinks**: undo previous change because it was not needed in the end
+
+### 💚👷 CI & Build
+
+- fix automerge for minor dependabot updates
+
+### 🧹 chore
+
+- **typo**: fix typo
+
 ## v0.0.14 (2024-11-07)
 
 ### ✨ Features
