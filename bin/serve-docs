@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 set -e
 
-poetry run mkdocs serve
+pdm run mkdocs serve

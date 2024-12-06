@@ -5,23 +5,23 @@ pre-commit run --all
 
 echo
 echo "RUNNING RUFF CHECK"
-poetry run ruff check
+pdm run ruff check
 
 echo
 echo "RUNNING RUFF FORMAT"
-poetry run ruff format
+pdm run ruff format
 
 echo
 echo "RUNNING PYRIGHT"
-poetry run pyright
+pdm run pyright
 
 echo
 echo "RUNNING CODESPELL"
-poetry run codespell
+pdm run codespell
 
 echo
 echo "RUNNING PYTEST AND COVERAGE"
-poetry run coverage run -m pytest
+pdm run coverage run -m pytest
 
 echo
 echo "BUILDING DOCS"

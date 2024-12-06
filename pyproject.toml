@@ -1,34 +1,29 @@
-[tool.poetry]
+[project]
+authors = [{ name = "microsoft" }]
+license = { text = "MIT License" }
+requires-python = ">=3.10"
 name = "cookie-doh"
 version = "0.0.15"
 description = ""
-authors = ["microsoft"]
-license = "MIT License"
 readme = "README.md"
-packages = [{ include = "cookie", from = "src" }]
+dependencies = []                  # write here dependencies of your project
 
-[tool.poetry.dependencies]
-# write here dependencies of your project
-python = "^3.10"
+[dependency-groups]
+dev = ["codespell", "coverage", "ipykernel", "ruff", "pyright", "pytest"]
+docs = [
+    "mkdocs",
+    "mkdocs-awesome-pages-plugin",
+    "mkdocs-git-revision-date-localized-plugin",
+    "mkdocs-material",
+    "mkdocs-video",
+    "mkdocstrings",
+    "mkdocstrings-python",
+    "pymdown-extensions",
+]
 
-[tool.poetry.group.dev.dependencies]
-codespell = "*"
-coverage = "*"
-ipykernel = "*"
-ruff = "*"
-pyright = "*"
-pytest = "*"
-
-[tool.poetry.group.docs.dependencies]
-mkdocs = "*"
-mkdocs-awesome-pages-plugin = "*"
-mkdocs-git-revision-date-localized-plugin = "*"
-mkdocs-material = "*"
-mkdocs-video = "*"
-mkdocstrings = "*"
-mkdocstrings-python = "*"
-pymdown-extensions = "*"
+[tool.pdm.build]
+includes = ["src"]
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"

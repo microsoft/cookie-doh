@@ -24,13 +24,13 @@ by opening your project's folder.
 This will set up VSCode with convenient settings and recommended extensions.
 * Put your python code in `src/{{project_name}}`, tests in `test/test_{{project_name}}`,
 and markdown documentation in `docs`.
-* When you run `poetry install` it will install the `src` package in editable mode, so every package
+* When you run `pdm install` it will install the `src` package in editable mode, so every package
 and module you add will be available to import locally in your project.
-* Add new dependencies to `pyproject.toml` and run `poetry install` to install them or
-run `poetry add <package>` to add a new dependency. Run `poetry update` to update all dependencies.
-Poetry will create a `.venv` folder with a virtual environment inside your project (configurable
-with `poetry.toml`).
-* To run tests, use `poetry run pytest`, or if you use [_direnv_](https://github.com/direnv/direnv)
+* Add new dependencies to `pyproject.toml` and run `pdm install` to install them or
+run `pdm add <package>` to add a new dependency. Run `pdm update` to update all dependencies.
+PDM will create a `.venv` folder with a virtual environment inside your project (configurable
+with `pdm.toml`).
+* To run tests, use `pdm run pytest`, or if you use [_direnv_](https://github.com/direnv/direnv)
 and have [enabled](dev_setup.md#direnv) it, simply run `pytest`.
 * You will only get the `docs` folder if you enabled documentation builds in the _copier_ prompts.
 Add your markdown documentation to the `docs` folder and run `bin/serve-docs` to see a live preview
