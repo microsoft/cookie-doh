@@ -1,3 +1,18 @@
+## v0.0.16 (2024-12-06)
+
+### ✨ Features
+
+- add pdm package management and remove poetry
+
+### 🐛🚑️ Fixes
+
+- installation in remote workflow
+- rebase instead of merge dependabot prs
+
+### build
+
+- **deps-dev**: bump tornado from 6.4.1 to 6.4.2
+
 ## v0.0.15 (2024-11-11)
 
 ### ✨ Features
