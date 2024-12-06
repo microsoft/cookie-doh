@@ -12,7 +12,7 @@ Cookie-doh is a repository template for creating single Python package projects 
 
 * :seedling: Improve your development workflow, validity and readability of code for individual & collaborative projects!
 
-* :scroll: Uses [poetry](https://python-poetry.org/) for dependency management, virtual environments and packaging, i.e., code is readily importable!
+* :scroll: Uses [pdm](https://pdm-project.org/) for dependency management, virtual environments and packaging, i.e., code is readily importable!
 
 * :tropical_drink: Takes less than a minute to create a fully pre-configured project!
 
@@ -36,7 +36,7 @@ copier copy gh:microsoft/cookie-doh <new-repo-folder>
 and answer the questions to create your new project.
 
 Minimum required system dependencies are [python >= 3.10](https://www.python.org/) and
-[poetry](https://python-poetry.org/docs/#installation).
+[PDM](https://pdm-project.org/en/latest/#installation).
 
 
 ## :notebook_with_decorative_cover: Documentation
@@ -77,7 +77,7 @@ and/or [PyCharm](https://www.jetbrains.com/help/pycharm/connect-to-devcontainer.
 ## :computer: Local development
 
 The only required system dependencies are [python >= 3.10](https://www.python.org/) and
-[poetry](https://python-poetry.org/).
+[PDM](https://pdm-project.org/).
 However, we recommend installing some extra dependencies to improve the development experience.
 
 :point_right: Follow [instructions](https://microsoft.github.io/cookie-doh/dev_setup)
@@ -88,7 +88,7 @@ to set up your local environment.
 
 Cookie-doh uses and generates projects with the following tools to help the development experience:
 
-* [Poetry](https://python-poetry.org/) for dependency management, virtual environments and
+* [PDM](https://pdm-project.org/) for dependency management, virtual environments and
 packaging, i.e., makes your code readily importable!
 * [ruff](https://github.com/astral-sh/ruff) for formatting and linting: helps you write clean and uniform code for better consistency (and it's fast!).
 * [pytest](https://docs.pytest.org/en/stable/) for testing: ensures your code is working as expected!

@@ -2,6 +2,8 @@
 .coverage
 .tmp
 .cache
+.pdm-python
+.pdm.toml
 
 **/*.pyc
 **/*.egg-info

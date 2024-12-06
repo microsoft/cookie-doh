@@ -2,4 +2,4 @@
 set -e
 
 rm -rf dist/site
-poetry run mkdocs build --site-dir=dist/site
+pdm run mkdocs build --site-dir=dist/site
