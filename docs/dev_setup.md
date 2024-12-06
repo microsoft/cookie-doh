@@ -11,7 +11,7 @@ Check the [minimum required dependencies](#minimum-required-dependencies) and in
 ### Minimum required dependencies:
 
   * [python >= 3.10](https://www.python.org/downloads/): we recommend installing python via [pyenv](#pyenv).
-  * [poetry](https://python-poetry.org/docs/#installation): we recommend installing [poetry](#poetry) with [pipx](#pipx).
+  * [PDM](https://pdm-project.org/en/latest/#installation): we recommend installing [PDM](#pdm) with [pipx](#pipx).
 
 
 ### [Direnv](https://direnv.net/)
@@ -30,7 +30,7 @@ echo 'eval "$(direnv hook bash)"' >> ~/.bashrc  # if you use bash
 echo 'eval "$(direnv hook zsh)"' >> ~/.zshrc  # if you use zsh
 eval "$(direnv hook bash)"  # add to current shell
 
-# Add poetry support to direnv
+# Add PDM support to direnv
 mkdir -p ~/.config/direnv/
 cp .devcontainer/direnvrc ~/.config/direnv/direnvrc
 ```
@@ -92,11 +92,11 @@ pipx ensurepath
 ```
 
 
-### [Poetry](https://python-poetry.org/)
+### [PDM](https://pdm-project.org/)
 To manage package dependencies and virtual environments.
 
 ```bash
-pipx install poetry
+pipx install pdm
 ```
 
 

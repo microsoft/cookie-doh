@@ -17,16 +17,16 @@ RUN apt-get -qq update && \
     rm -rf /var/lib/apt/lists/* && \
     rm -rf /tmp/*
 
-RUN pipx install poetry && \
+RUN pipx install pdm && \
     rm -rf ~/.cache
 
 RUN mkdir -p $PROJECT_PATH/src/cookie && \
     touch $PROJECT_PATH/src/cookie/__init__.py && \
     touch $PROJECT_PATH/README.md
 
-COPY pyproject.toml poetry.lock $PROJECT_PATH/
+COPY pyproject.toml pdm.lock $PROJECT_PATH/
 
-RUN poetry install --only main && \
+RUN pdm install --prod && \
     rm -rf /root/.cache
 
 COPY src $PROJECT_PATH/src

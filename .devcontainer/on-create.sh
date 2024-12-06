@@ -10,13 +10,13 @@ pipx ensurepath
 echo "UPDATE PIP"
 pip3 install -U pip
 
-echo "POETRY INSTALL"
-pipx install poetry
-poetry completions bash >> ~/.bash_completion
-mkdir $ZSH_CUSTOM/plugins/poetry
-poetry completions zsh > $ZSH_CUSTOM/plugins/poetry/_poetry
-sed -i 's/plugins=(git)/plugins=(git poetry)/' ~/.zshrc
-poetry config virtualenvs.in-project true
+echo "PDM INSTALL"
+pipx install pdm
+pdm completion bash > ~/.bash_completion
+mkdir $ZSH_CUSTOM/plugins/pdm
+pdm completion zsh > ~/.zfunc/_pdm
+sed -i 's/plugins=(git)/plugins=(git pdm)/' ~/.zshrc
+pdm config virtualenvs.in-project true
 direnv allow .
-poetry env remove --all
-poetry install
+pdm env remove --all
+pdm install

@@ -1,33 +1,30 @@
-[tool.poetry]
+[project]
+authors = []
+license = { text = "MIT License" }
+requires-python = ">=3.10"
 name = "{{project_name}}"
 version = "0.0.0"
 description = ""
-authors = []
-license = "MIT License"
 readme = "README.md"
-packages = [{ include = "{{module_name}}", from = "src" }]
+dependencies = []                  # write here dependencies of your project
 
-[tool.poetry.dependencies]
-# write here dependencies of your project
-python = "^3.10"
-
-[tool.poetry.group.dev.dependencies]
-codespell = "*"
-coverage = "*"
-ipykernel = "*"
-ruff = "*"
-pyright = "*"
-pytest = "*"
+[dependency-groups]
+dev = ["codespell", "coverage", "ipykernel", "ruff", "pyright", "pytest"]
 {% if documentation %}
-[tool.poetry.group.docs.dependencies]
-mkdocs = "*"
-mkdocs-awesome-pages-plugin = "*"
-mkdocs-material = "*"
-mkdocs-video = "*"
-mkdocstrings = "*"
-mkdocstrings-python = "*"
-pymdown-extensions = "*"
+docs = [
+    "mkdocs",
+    "mkdocs-awesome-pages-plugin",
+    "mkdocs-git-revision-date-localized-plugin",
+    "mkdocs-material",
+    "mkdocs-video",
+    "mkdocstrings",
+    "mkdocstrings-python",
+    "pymdown-extensions",
+]
 {% endif %}
+[tool.pdm.build]
+includes = ["src"]
+
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
