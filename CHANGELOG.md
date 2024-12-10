@@ -1,3 +1,9 @@
+## v0.0.17 (2024-12-10)
+
+### 🐛🚑️ Fixes
+
+- jinja was not escaping some variable interpolation
+
 ## v0.0.16 (2024-12-06)
 
 ### ✨ Features
