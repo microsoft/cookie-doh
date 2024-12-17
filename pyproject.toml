@@ -9,7 +9,15 @@ readme = "README.md"
 dependencies = []                  # write here dependencies of your project
 
 [dependency-groups]
-dev = ["codespell", "coverage", "ipykernel", "ruff", "pyright", "pytest"]
+dev = [
+    "codespell",
+    "coverage",
+    "ipykernel",
+    "jinja2",
+    "ruff",
+    "pyright",
+    "pytest",
+]
 docs = [
     "mkdocs",
     "mkdocs-awesome-pages-plugin",
