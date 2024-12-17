@@ -19,6 +19,9 @@ jobs:
   build-docs:
     uses: ./.github/workflows/docs.yml
 {% endif %}
+  build-wheels:
+    uses: ./.github/workflows/wheels.yml
+
   codeql:
     uses: ./.github/workflows/codeql.yml
     secrets: inherit

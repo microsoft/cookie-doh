@@ -27,6 +27,14 @@ jobs:
       pages: write
       id-token: write
 {% endif %}
+  wheels:
+    uses: ./.github/workflows/wheels.yml
+    secrets: inherit
+    permissions:
+      contents: read
+      actions: write
+      id-token: write
+
   codeql:
     uses: ./.github/workflows/codeql.yml
     secrets: inherit
