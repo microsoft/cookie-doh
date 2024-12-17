@@ -1,3 +1,13 @@
+## v0.0.19 (2024-12-17)
+
+### ✅🤡🧪 Tests
+
+- add jinja2 rendering tests for template files
+
+### 📌➕⬇️ ➖⬆️  Dependencies
+
+- **pyproject**: add jinja2 package to dev environment
+
 ## v0.0.18 (2024-12-10)
 
 ### 🐛🚑️ Fixes

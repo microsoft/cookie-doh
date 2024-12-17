@@ -3,7 +3,7 @@ authors = [{ name = "microsoft" }]
 license = { text = "MIT License" }
 requires-python = ">=3.10"
 name = "cookie-doh"
-version = "0.0.18"
+version = "0.0.19"
 description = ""
 readme = "README.md"
 dependencies = []                  # write here dependencies of your project
