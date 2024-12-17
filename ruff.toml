@@ -35,7 +35,7 @@ dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
 convention = "google"
 
 [lint.isort]
-known-first-party = ["{{project_name}}", "{{project_name}}_test"]
+known-first-party = ["cookie", "cookie_test"]
 
 [format]
 quote-style = "double"            # Like Black, use double quotes for strings.
