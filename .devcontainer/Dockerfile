@@ -11,7 +11,6 @@ ENV HOROVOD_GPU_ALLREDUCE=NCCL
 
 RUN apt-get -qq update \
     && apt-get -qq install --no-install-recommends \
-    python3-minimal python3-dev python3-pip python3-venv python-is-python3 pipx \
     apt-transport-https ca-certificates curl wget gnupg lsb-release sudo git zsh \
     openssh-server openssh-client tmux fzf direnv neovim \
     && apt-get -qq clean \

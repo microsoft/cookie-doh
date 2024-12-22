@@ -10,7 +10,7 @@ and the corresponding line in the `docs/.pages` file from your project.
 
 Required dependencies:
 
-* Make sure you have `python >= 3.10` and `PDM` installed.
+* Make sure you have `uv` installed.
 * Instructions: https://microsoft.github.io/cookie-doh/dev_setup
 * You can also install optional tools like `direnv` and `pre-commit` following the link above
 if needed for your project.
@@ -41,8 +41,7 @@ Once you've created your new repository, the creation process will tell you to:
     ```
 3. Install dependencies:
     ```bash
-    pdm add <dependencies>
-    pdm install
+    uv add <dependencies>
     ```
 4. Commit the initial files:
     ```bash

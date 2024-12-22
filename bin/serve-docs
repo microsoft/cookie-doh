@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 set -e
 
-pdm run mkdocs serve
+uv run mkdocs serve

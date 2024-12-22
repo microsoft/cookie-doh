@@ -2,6 +2,7 @@
 # :house_with_garden: repo structure
 
 ## :bricks: Main structure
+
 Your new repo will have the following structure:
 
 ```
@@ -24,13 +25,13 @@ by opening your project's folder.
 This will set up VSCode with convenient settings and recommended extensions.
 * Put your python code in `src/{{project_name}}`, tests in `test/test_{{project_name}}`,
 and markdown documentation in `docs`.
-* When you run `pdm install` it will install the `src` package in editable mode, so every package
+* When you run `uv add` or `uv run`, it will install the `src` package in editable mode, so every package
 and module you add will be available to import locally in your project.
-* Add new dependencies to `pyproject.toml` and run `pdm install` to install them or
-run `pdm add <package>` to add a new dependency. Run `pdm update` to update all dependencies.
-PDM will create a `.venv` folder with a virtual environment inside your project (configurable
-with `pdm.toml`).
-* To run tests, use `pdm run pytest`, or if you use [_direnv_](https://github.com/direnv/direnv)
+* Add new dependencies to `pyproject.toml` or
+run `uv add <package>` to add a new dependency. Run `uv lock upgrade` to update all dependencies in the lock file.
+uv will create a `.venv` folder with a virtual environment inside your project (configurable
+with `uv.toml`).
+* To run tests, use `uv run pytest`, or if you use [_direnv_](https://github.com/direnv/direnv)
 and have [enabled](dev_setup.md#direnv) it, simply run `pytest`.
 * You will only get the `docs` folder if you enabled documentation builds in the _copier_ prompts.
 Add your markdown documentation to the `docs` folder and run `bin/serve-docs` to see a live preview
@@ -38,10 +39,10 @@ Add your markdown documentation to the `docs` folder and run `bin/serve-docs` to
 * Edit your `README.md` file to include information about your project, how to install it,
 how to use it, and any other relevant information you may want to share.
 
-
 ## :building_construction: Configuration, commands and workflows
 
 Further relevant configuration files, binaries and workflows are shown in the following tree:
+
 ```
 ruff.toml
 pyrightconfig.json
@@ -75,10 +76,10 @@ and workflows folder for automatic CI checks on pull requests, pushes, and weekl
 environments automatically. We strongly encourage you to use _direnv_ to manage your [development
 environment](dev_setup.md#direnv) for its convenience.
 
-
 ## :cherries: Pre-commit, commitizen and documentation (optional)
 
 Other configuration files may include (depending on your choices during the _copier_ process):
+
 ```
 .pre-commit-config.yaml
 .cz.toml
