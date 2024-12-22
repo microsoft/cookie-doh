@@ -47,15 +47,10 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 ### [Pre-commit](https://pre-commit.com/)
 
 To run code formatting and linting before committing.
-
-```bash
-uv tool install pre-commit
-```
-
 In your projects, you should enable pre-commit hooks by running:
 
 ```bash
-pre-commit install --install-hooks
+uvx --with pre-commit-uv -- pre-commit install --install-hooks
 ```
 
 ### [Commitizen](https://commitizen-tools.github.io/commitizen/)

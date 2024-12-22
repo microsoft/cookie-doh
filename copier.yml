@@ -121,7 +121,7 @@ _message_after_copy: |
 
      $ git add .
      {% if precommit -%}
-     $ pre-commit install --install-hooks
+     $ uvx --with pre-commit-uv -- pre-commit install --install-hooks
      {% endif -%}
      $ git commit -m "init: initialize repo"
 
