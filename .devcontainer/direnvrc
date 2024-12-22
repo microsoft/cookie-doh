@@ -4,7 +4,6 @@ layout_uv() {
     uv init --quiet
   fi
 
-  uv run echo >> /dev/null
   local VENV_BIN_DIR=$(dirname $(uv run which python))
   VIRTUAL_ENV=$(dirname "$VENV_BIN_DIR")
 
