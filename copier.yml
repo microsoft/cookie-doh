@@ -69,7 +69,7 @@ _subdirectory: template
 _exclude:
   - CHANGELOG.md
   - cookie-doh.code-workspace
-  - pdm.lock
+  - uv.lock
   - copier.yaml
   - copier.yml
   - .git
@@ -83,7 +83,7 @@ _message_after_copy: |
   Your project "{{ project_name }}" has been created successfully! 🎉
 
   Required dependencies:
-  * Make sure you have `python >= 3.10` and `pdm` installed.
+  * Make sure you have `uv` installed.
   * Instructions: https://microsoft.github.io/cookie-doh/dev_setup
   * You can also install optional tools like `direnv` and `pre-commit` following the link above
   if needed for your project.
@@ -113,10 +113,9 @@ _message_after_copy: |
 
   {% endif -%}
 
-  3. Add project dependencies to `pyproject.toml` and install them with PDM:
+  3. Add project dependencies to `pyproject.toml` with uv:
 
-     $ pdm add <new-dependencies>  # optional
-     $ pdm install
+     $ uv add <new-dependencies>
 
   4. Add the project outputs, configure pre-commit and commit your changes:
 
