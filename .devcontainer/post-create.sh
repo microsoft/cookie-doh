@@ -12,8 +12,7 @@ git config --global alias.mt mergetool
 git config --global alias.pl pull --rebase
 
 echo "INSTALLING COMMITIZEN"
-pipx install commitizen
-pipx inject commitizen cz-conventional-gitmoji
+uv tool install --with cz-conventional-gitmoji commitizen
 echo 'eval "$(register-python-argcomplete3 cz)"' >> ~/.bashrc
 echo 'eval "$(register-python-argcomplete3 cz)"' >> ~/.zshrc
 
@@ -22,5 +21,5 @@ if [ ! -d .git ]; then
     echo "Initializing Git..."
     git init
 fi
-pipx install pre-commit
+uv tool install pre-commit
 pre-commit install --install-hooks

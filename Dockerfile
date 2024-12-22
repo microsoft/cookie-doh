@@ -8,25 +8,14 @@ ENV PATH=$PROJECT_PATH/.venv/bin:$PATH
 
 WORKDIR $PROJECT_PATH
 
-
-RUN apt-get -qq update && \
-    apt-get -qq install --no-install-recommends \
-    python3-minimal python3-dev python3-pip python3-venv python-is-python3 pipx && \
-    pipx ensurepath && \
-    apt-get -qq clean && \
-    rm -rf /var/lib/apt/lists/* && \
-    rm -rf /tmp/*
-
-RUN pipx install pdm && \
-    rm -rf ~/.cache
-
 RUN mkdir -p $PROJECT_PATH/src/cookie && \
     touch $PROJECT_PATH/src/cookie/__init__.py && \
     touch $PROJECT_PATH/README.md
 
-COPY pyproject.toml pdm.lock $PROJECT_PATH/
+COPY pyproject.toml uv.lock $PROJECT_PATH/
 
-RUN pdm install --prod && \
-    rm -rf /root/.cache
+RUN curl -LsSf https://astral.sh/uv/install.sh | sh && \
+    uv sync --no-dev && \
+    uv cache clean
 
 COPY src $PROJECT_PATH/src

@@ -66,4 +66,4 @@ repos:
         name: Run codespell to check for common misspellings in files
         language: python
         types: [text]
-        exclude: "pdm.lock|CHANGELOG.md"
+        exclude: "uv.lock|CHANGELOG.md"
