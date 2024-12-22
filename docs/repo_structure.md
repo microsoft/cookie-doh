@@ -88,7 +88,7 @@ mkdocs.yml
 ```
 
 * Pre-commit is a tool to run code formatting and linting before committing changes.
-You can run `pre-commit run --all-files` to run a bunch of checks manually.
+You can run `uvx pre-commit run --all-files` to run a bunch of checks manually.
 Add new hooks or remove existing ones in the `.pre-commit-config.yaml` file.
 * The `.cz.toml` file is used by _commitizen_ to write commit message.
 It relies on the `cz-conventional-gitmoji` plugin to combine gitmoji and conventional commits.

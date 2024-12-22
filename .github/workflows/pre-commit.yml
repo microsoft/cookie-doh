@@ -15,6 +15,6 @@ jobs:
         uses: astral-sh/setup-uv@v4
 
       - name: pre-commit
-        run: uvx --python 3.10 -- pre-commit run --all-files
+        run: uvx --with pre-commit-uv --python 3.10 -- pre-commit run --all-files
         env:
           SKIP: "ruff,ruff-format,pyright,codespell"
