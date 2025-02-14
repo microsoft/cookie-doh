@@ -1,1 +1,49 @@
-../ruff.toml
+cache-dir = ".tmp/.ruff_cache"
+include = ["src/**/*.py", "test/**/*.py"]
+line-length = 99
+indent-width = 4
+target-version = "py310"
+
+[lint]
+# Enable Pyflakes (`F`) and a subset of the pycodestyle (`E`)  codes by default.
+select = ["B", "D", "E", "F", "I", "Q", "W", "NPY", "PD", "PTH", "RUF", "UP"]
+ignore = [
+    "B026", # B026: Star-arg unpacking after a keyword argument is strongly discouraged
+    "D100", # D100: Missing docstring in public module
+    "D101", # D101: Missing docstring in public class
+    "D102", # D102: Missing docstring in public method
+    "D103", # D103: Missing docstring in public function
+    "D104", # D104: Missing docstring in public package
+    "D105", # D105: Missing docstring in magic method
+    "D107", # D107: Missing docstring in __init__
+    "D417", # D417: Missing argument descriptions in Docstrings
+    "E203", # E203: Whitespace before ':'
+    "E501", # E501: Line too long ({width} > {limit})
+]
+
+# Allow fix for all enabled rules (when `--fix`) is provided.
+fixable = ["ALL"]
+unfixable = []
+
+# Allow unused variables when underscore-prefixed.
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+[lint.per-file-ignores]
+"test/*" = ["F401"] # unused-import
+
+[lint.pydocstyle]
+convention = "google"
+
+[lint.isort]
+known-first-party = ["{{module_name}}", "test_{{module_name}}"]
+known-third-party = ["wandb"]
+
+[format]
+quote-style = "double"            # Like Black, use double quotes for strings.
+indent-style = "space"            # Like Black, indent with spaces, rather than tabs.
+skip-magic-trailing-comma = false # Like Black, respect magic trailing commas.
+line-ending = "auto"              # Like Black, automatically detect the appropriate line ending.
+
+# Enable auto-formatting of code examples in docstrings. Markdown,
+# reStructuredText code/literal blocks and doctests are all supported.
+docstring-code-format = true

@@ -32,6 +32,7 @@ def environment() -> Environment:
         "ruff.toml.jinja",
         "SUPPORT.md.jinja",
         "pyproject.toml.jinja",
+        "ruff.toml.jinja",
         ".envrc.jinja",
         ".python-version",
         ".devcontainer/post-create.sh.jinja",
