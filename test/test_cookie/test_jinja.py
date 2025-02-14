@@ -33,6 +33,7 @@ def environment() -> Environment:
         "SUPPORT.md.jinja",
         "pyproject.toml.jinja",
         ".envrc.jinja",
+        ".python-version",
         ".devcontainer/post-create.sh.jinja",
         "{% if documentation %}docs{% endif %}/getting_started.md.jinja",
     ]
