@@ -1,3 +1,13 @@
+## v0.0.21 (2025-02-17)
+
+### fix
+
+- wrong indentation in mkdocs.yml
+
+### 🔐🚧📈✏️💩👽️🍻💬🥚🌱🚩🥅🩺 Others
+
+- breaking change
+
 ## v0.0.20 (2025-02-17)
 
 ### ♻️ Refactorings
