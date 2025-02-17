@@ -57,7 +57,8 @@ Once you've created your new repository, the creation process will tell you to:
 
     ```bash
     git add .
-    uvx --with pre-commit-uv -- pre-commit install --install-hooks  # only if you chose to get pre-commit and have it installed
+    uv tool install pre-commit --with pre-commit-uv  # only if you want to install pre-commit
+    pre-commit install --install-hooks
     git commit -m "init: initialize repo"
     git push -u origin main
     ```

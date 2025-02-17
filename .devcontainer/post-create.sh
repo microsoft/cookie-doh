@@ -21,4 +21,5 @@ if [ ! -d .git ]; then
     echo "Initializing Git..."
     git init
 fi
-uvx --with pre-commit-uv -- pre-commit install --install-hooks
+uv tool install pre-commit --with pre-commit-uv
+pre-commit install --install-hooks
