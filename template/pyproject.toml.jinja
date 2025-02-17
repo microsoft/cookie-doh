@@ -18,13 +18,17 @@ docs = [
     "mkdocs-material",
     "mkdocs-video",
     "mkdocstrings",
-    "mkdocstrings-python",
+    "mkdocstrings-python==1.13",
     "pymdown-extensions",
 ]
-{% endif %}
-[tool.pdm.build]
-includes = ["src"]
+{-% endif %}
+
+[tool.uv]
+default-groups = ["dev", "docs"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/{{ module }}"]
 
 [build-system]
-requires = ["pdm-backend"]
-build-backend = "pdm.backend"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
