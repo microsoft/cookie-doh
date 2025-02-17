@@ -50,7 +50,8 @@ To run code formatting and linting before committing.
 In your projects, you should enable pre-commit hooks by running:
 
 ```bash
-uvx --with pre-commit-uv -- pre-commit install --install-hooks
+uv tool install pre-commit --with pre-commit-uv  # local user install
+pre-commit install --install-hooks  # enable pre-commit hooks inside project
 ```
 
 ### [Commitizen](https://commitizen-tools.github.io/commitizen/)
