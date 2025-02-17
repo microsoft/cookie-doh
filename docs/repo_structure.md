@@ -28,7 +28,7 @@ and markdown documentation in `docs`.
 * When you run `uv add` or `uv run`, it will install the `src` package in editable mode, so every package
 and module you add will be available to import locally in your project.
 * Add new dependencies to `pyproject.toml` or
-run `uv add <package>` to add a new dependency. Run `uv lock upgrade` to update all dependencies in the lock file.
+run `uv add <package>` to add a new dependency. Run `uv lock --upgrade` to update all dependencies in the lock file.
 uv will create a `.venv` folder with a virtual environment inside your project (configurable
 with `uv.toml`).
 * To run tests, use `uv run pytest`, or if you use [_direnv_](https://github.com/direnv/direnv)
@@ -88,7 +88,7 @@ mkdocs.yml
 ```
 
 * Pre-commit is a tool to run code formatting and linting before committing changes.
-You can run `uvx pre-commit run --all-files` to run a bunch of checks manually.
+You can run `pre-commit run --all-files` to run a bunch of checks manually (after having installed it with `uv tool install pre-commit --with pre-commit-uv; pre-commit install --install-hooks`)
 Add new hooks or remove existing ones in the `.pre-commit-config.yaml` file.
 * The `.cz.toml` file is used by _commitizen_ to write commit message.
 It relies on the `cz-conventional-gitmoji` plugin to combine gitmoji and conventional commits.
