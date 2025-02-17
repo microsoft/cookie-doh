@@ -11,8 +11,9 @@ pip3 install -U pip
 
 echo "UV INSTALL"
 curl -LsSf https://astral.sh/uv/install.sh | sh
-uv generate-shell-completion bash > ~/.bash_completion
+echo 'eval "$(uv generate-shell-completion bash)"' >> ~/.bashrc
+echo 'eval "$(uvx --generate-shell-completion bash)"' >> ~/.bashrc
 mkdir $ZSH_CUSTOM/plugins/uv
-uv generate-shell-completion zsh > ~/.zfunc/_uv
-sed -i 's/plugins=(git)/plugins=(git uv)/' ~/.zshrc
+echo 'eval "$(uv generate-shell-completion zsh)"' >> ~/.zshrc
+echo 'eval "$(uvx --generate-shell-completion zsh)"' >> ~/.zshrc
 direnv allow .
