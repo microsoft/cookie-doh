@@ -16,4 +16,7 @@ echo 'eval "$(uvx --generate-shell-completion bash)"' >> ~/.bashrc
 mkdir $ZSH_CUSTOM/plugins/uv
 echo 'eval "$(uv generate-shell-completion zsh)"' >> ~/.zshrc
 echo 'eval "$(uvx --generate-shell-completion zsh)"' >> ~/.zshrc
+
+echo "INSTALLING PACKAGES"
+uv sync
 direnv allow .
