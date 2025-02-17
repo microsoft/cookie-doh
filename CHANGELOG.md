@@ -1,3 +1,49 @@
+## v0.0.20 (2025-02-17)
+
+### ♻️ Refactorings
+
+- use uvx with pre-commit-uv to run pre-commit >>> ⏰ 10m
+- replace PDM, pipx, pyenv and more with uv >>> ⏰ 2h
+
+### ⚡️ Performance
+
+- **python**: update python version
+
+### dep-bump
+
+- update packages
+- update dependencies
+
+### fix
+
+- wrong jinja syntax
+- pin because of bug in mkdocstrings-python
+- missing set up python
+- added wandb as known-third-party library for ruff correct sorting
+
+### perf
+
+- switch workflows to python 3.12
+
+### style
+
+- install packages with uv before direnv allow
+- some more style changes
+- some style adjustments
+
+### 📌➕⬇️➖⬆️ Dependencies
+
+- **ci**: upgrade GHA to install uv >>> ⏰ 1m
+- **all**: update dependencies
+
+### 📝💡 Documentation
+
+- **banner**: update copyright year
+
+### 🔥⚰️ Clean up
+
+- **direnvrc**: remove unnecessary call to uv run
+
 ## v0.0.19 (2024-12-17)
 
 ### ✅🤡🧪 Tests
