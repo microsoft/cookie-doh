@@ -158,7 +158,7 @@ wheels = [
 
 [[package]]
 name = "cookie-doh"
-version = "0.0.19"
+version = "0.0.20"
 source = { editable = "." }
 
 [package.dev-dependencies]
@@ -201,7 +201,7 @@ docs = [
     { name = "mkdocs-material" },
     { name = "mkdocs-video" },
     { name = "mkdocstrings" },
-    { name = "mkdocstrings-python", specifier = "==1.13" },
+    { name = "mkdocstrings-python" },
     { name = "pymdown-extensions" },
 ]
 
@@ -698,16 +698,16 @@ wheels = [
 
 [[package]]
 name = "mkdocstrings-python"
-version = "1.13.0"
+version = "1.16.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "griffe" },
     { name = "mkdocs-autorefs" },
     { name = "mkdocstrings" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/ab/ae/32703e35d74040051c672400fd9f5f2b48a6ea094f5071dd8a0e3be35322/mkdocstrings_python-1.13.0.tar.gz", hash = "sha256:2dbd5757e8375b9720e81db16f52f1856bf59905428fd7ef88005d1370e2f64c", size = 185697 }
+sdist = { url = "https://files.pythonhosted.org/packages/41/d9/7e4900326cd3c27aed05379ff4c4b5f10435845ea26b1f764353405f3b75/mkdocstrings_python-1.16.0.tar.gz", hash = "sha256:546d53c7d559941abc726b2f78a41c0183480a95ba0a87ccc63b9b08740126f9", size = 423102 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/51/23/d02d86553327296c3bf369d444194ea83410cce8f0e690565264f37f3261/mkdocstrings_python-1.13.0-py3-none-any.whl", hash = "sha256:b88bbb207bab4086434743849f8e796788b373bd32e7bfefbf8560ac45d88f97", size = 112254 },
+    { url = "https://files.pythonhosted.org/packages/66/54/8a2eeddc77a68eae88bd3d4a04638797e172bd462344a9a883aacee18aac/mkdocstrings_python-1.16.0-py3-none-any.whl", hash = "sha256:80ecbcca67fe29eb5a853ab7be0457231f6eefb5d079bcdf7dbae16962fc3f51", size = 449114 },
 ]
 
 [[package]]
