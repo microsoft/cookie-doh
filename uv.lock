@@ -158,7 +158,7 @@ wheels = [
 
 [[package]]
 name = "cookie-doh"
-version = "0.0.20"
+version = "0.0.21"
 source = { editable = "." }
 
 [package.dev-dependencies]
