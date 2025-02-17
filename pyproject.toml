@@ -25,7 +25,7 @@ docs = [
     "mkdocs-material",
     "mkdocs-video",
     "mkdocstrings",
-    "mkdocstrings-python==1.13",
+    "mkdocstrings-python==1.16",
     "pymdown-extensions",
 ]
 
