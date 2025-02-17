@@ -59,7 +59,7 @@ pre-commit install --install-hooks  # enable pre-commit hooks inside project
 To help with [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/).
 
 ```bash
-uv tool install --with cz-conventional-gitmoji commitizen
+uv tool install commitizen --with cz-conventional-gitmoji
 ```
 
 ### [Copier](https://copier.readthedocs.io/en/stable/)

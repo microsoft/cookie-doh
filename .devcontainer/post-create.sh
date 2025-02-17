@@ -12,7 +12,7 @@ git config --global alias.mt mergetool
 git config --global alias.pl pull --rebase
 
 echo "INSTALLING COMMITIZEN"
-uv tool install --with cz-conventional-gitmoji commitizen
+uv tool install commitizen --with cz-conventional-gitmoji
 echo 'eval "$(register-python-argcomplete3 cz)"' >> ~/.bashrc
 echo 'eval "$(register-python-argcomplete3 cz)"' >> ~/.zshrc
 

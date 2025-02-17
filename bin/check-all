@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 echo "RUNNING PRE-COMMIT HOOKS"
-uvx -- pre-commit run --all
+uvx --with pre-commit-uv -- pre-commit run --all
 
 echo
 echo "RUNNING RUFF CHECK"
