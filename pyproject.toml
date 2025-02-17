@@ -25,13 +25,16 @@ docs = [
     "mkdocs-material",
     "mkdocs-video",
     "mkdocstrings",
-    "mkdocstrings-python",
+    "mkdocstrings-python==1.13",
     "pymdown-extensions",
 ]
 
-[tool.pdm.build]
-includes = ["src"]
+[tool.uv]
+default-groups = ["dev", "docs"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/cookie"]
 
 [build-system]
-requires = ["pdm-backend"]
-build-backend = "pdm.backend"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
