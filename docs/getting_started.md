@@ -2,21 +2,25 @@
 
 ## :tada: Create a new project
 
-1. [Install copier](dev_setup.md#copier).
-2. Create a new project from the template:
-
+1. [Install uv](https://docs.astral.sh/uv/getting-started/installation/).
+    ```bash
+    curl -LsSf https://astral.sh/uv/install.sh | sh
+    ```
+2. [Install copier](dev_setup.md#copier).
+    ```bash
+    uv tool install copier
+    ```
+3. Create a new project from the template:
     ```bash
     copier gh:microsoft/cookie-doh <project-folder>
     ```
 
 ## :walking: First steps with your new project
 
-Required dependencies:
+Instructions: <https://microsoft.github.io/cookie-doh/dev_setup>
 
 * Make sure you have `uv` installed.
-* Instructions: <https://microsoft.github.io/cookie-doh/dev_setup>
-* You can also install optional tools like `direnv` and `pre-commit` following the link above
-if needed for your project.
+* Install optional tools like `direnv` and `pre-commit`.
 
 Once you've created your new repository, the creation process will tell you to:
 
@@ -58,7 +62,7 @@ Once you've created your new repository, the creation process will tell you to:
     ```bash
     git add .
     uv tool install pre-commit --with pre-commit-uv  # only if you want to install pre-commit
-    pre-commit install --install-hooks
+    pre-commit install --install-hooks  # only if you want to use pre-commit
     git commit -m "init: initialize repo"
     git push -u origin main
     ```

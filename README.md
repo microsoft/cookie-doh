@@ -10,11 +10,11 @@ Cookie-doh is a repository template for creating single Python package projects 
 
 ## :woman_shrugging: Why should I care?
 
-* :seedling: Improve your development workflow, validity and readability of code for individual & collaborative projects!
+* :seedling: Improve your development workflow.
 
-* :scroll: Uses [uv](https://docs.astral.sh/uv) for dependency management, virtual environments and packaging, i.e., code is readily importable!
+* :scroll: Uses [uv](https://docs.astral.sh/uv) for dependency management.
 
-* :tropical_drink: Takes less than a minute to create a fully pre-configured project!
+* :tropical_drink: Less than a minute to create a fully pre-configured project!
 
 :link: Short-link: [https://aka.ms/cookie-doh]()
 
@@ -24,18 +24,14 @@ Cookie-doh is a repository template for creating single Python package projects 
 
 ## :rocket: Getting started with cookie-doh
 
-This template uses [_copier_](https://github.com/copier-org/copier) to create new repositories.
-If you don't have _copier_, follow the [installation instructions](https://copier.readthedocs.io/en/stable/#installation).
-
-Then, simply type
+This template uses [uv](https://docs.astral.sh/uv/getting-started/installation/) and
+ [_copier_](https://github.com/copier-org/copier) to create new repositories:
 
 ```bash
-copier copy gh:microsoft/cookie-doh <new-repo-folder>
+curl -LsSf https://astral.sh/uv/install.sh | sh  # Install uv
+uv tool install copier  # Install copier
+copier copy gh:microsoft/cookie-doh <new-repo-folder>  # Create new project
 ```
-
-and answer the questions to create your new project.
-
-The only required dependency is [uv](https://docs.astral.sh/uv/getting-started/installation/).
 
 ## :notebook_with_decorative_cover: Documentation
 
@@ -43,14 +39,11 @@ Visit the documentation:
 
 <https://microsoft.github.io/cookie-doh/>
 
-:point_right: Go to [new project](https://microsoft.github.io/cookie-doh/getting_started/) to get started!
+:point_right: Go to [new project](https://microsoft.github.io/cookie-doh/getting_started/) for first steps!
 
 ## :space_invader: Codespaces
 
-We provide a configured devcontainer for you to use in your new project and/or cookie-doh itself.
-You can create a container image with all the necessary dependencies,
-and use it for remote development in a remote node with [GitHub Codespaces](https://docs.github.com/en/codespaces)
-or [DevPod](https://devpod.sh/).
+Learn about [GitHub Codespaces](https://docs.github.com/en/codespaces) and [DevPod](https://devpod.sh/).
 
 :point_right: Click below to clone or fork this repository automatically and start developing:
 
@@ -60,9 +53,6 @@ or [DevPod](https://devpod.sh/).
 
 ## :gear: Devcontainer
 
-Alternatively, you can build a local container directly and use it in VSCode and/or
-PyCharm without developing in a remote node or setting up a local environment.
-
 Learn about [Devcontainers](https://containers.dev).
 Requires [Docker](https://www.docker.com/get-started/) installed on your local machine.
 
@@ -70,9 +60,6 @@ Requires [Docker](https://www.docker.com/get-started/) installed on your local m
 and/or [PyCharm](https://www.jetbrains.com/help/pycharm/connect-to-devcontainer.html).
 
 ## :computer: Local development
-
-The only required dependency is [uv](https://docs.astral.sh/uv/getting-started/installation/).
-However, we recommend installing some extra dependencies to improve the development experience.
 
 :point_right: Follow [instructions](https://microsoft.github.io/cookie-doh/dev_setup)
 to set up your local environment.
@@ -82,15 +69,14 @@ to set up your local environment.
 Cookie-doh uses and generates projects with the following tools to help the development experience:
 
 * [uv](https://docs.astral.sh/uv/) for dependency management, virtual environments and
-packaging, i.e., makes your code readily importable!
-* [ruff](https://docs.astral.sh/ruff/) for formatting and linting: helps you write clean and uniform code for better consistency (and it's fast!).
-* [pytest](https://docs.pytest.org/en/stable/) for testing: ensures your code is working as expected!
-* [pyright](https://github.com/microsoft/pyright) for static annotations: helps identify simple errors, but more importantly,
-makes your code more readable!
+packaging. Configured so that your code is readily importable.
+* [ruff](https://docs.astral.sh/ruff/) for formatting and linting: helps you write clean and uniform code across collaborations.
+* [pytest](https://docs.pytest.org/en/stable/) for testing: ensures your code is working as expected.
+* [pyright](https://github.com/microsoft/pyright) for static annotations: helps identify simple errors and makes your code more readable!
 * [codespell](https://github.com/codespell-project/codespell) for spell checking: pinpoints spelling errors across code and documents.
 * [CI workflows](https://en.wikipedia.org/wiki/Continuous_integration): automates validation when you submit a PR or merge to `main` branch.
 
-Optional tools (when you create a new project):
+Optional tools (configurable when you create a new project):
 
 * [MkDocs](https://squidfunk.github.io/mkdocs-material/) for beautiful markdown documentation builds (like [cookie-doh](https:microsoft.github.io/cookie-doh)'s).
 * [pre-commit](https://pre-commit.com/) for quick validation checks and fixes before committing.
