@@ -8,12 +8,10 @@ and the corresponding line in the `docs/.pages` file from your project.
 
 ## :walking: First steps with your new project
 
-Required dependencies:
+Instructions: <https://microsoft.github.io/cookie-doh/dev_setup>
 
 * Make sure you have `uv` installed.
-* Instructions: https://microsoft.github.io/cookie-doh/dev_setup
-* You can also install optional tools like `direnv` and `pre-commit` following the link above
-if needed for your project.
+* Install optional tools like `direnv` and `pre-commit`.
 
 Once you've created your new repository, the creation process will tell you to:
 
@@ -46,8 +44,10 @@ Once you've created your new repository, the creation process will tell you to:
 4. Commit the initial files:
     ```bash
     git add .
-    uv tool install pre-commit --with pre-commit-uv  # only if you want to install pre-commit
+    {% if precommit -%}
+    uv tool install pre-commit --with pre-commit-uv
     pre-commit install --install-hooks
+    {% endif -%}
     git commit -m "init: initialize repo"
     git push -u origin main
     ```

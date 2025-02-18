@@ -4,13 +4,15 @@
  you don't need to set up a local development environment.
  But otherwise, follow these steps to set up some useful utilities.
 
-Check the [minimum required dependencies](#minimum-required-dependencies) and install the tools you need.
-
 ## :penguin: Linux/WSL instructions
 
-### Minimum required dependencies
+### [uv](https://docs.astral.sh/uv/)
 
-* [uv](https://docs.astral.sh/uv/)
+To manage package dependencies and virtual environments.
+
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
 
 ### [Direnv](https://direnv.net/)
 
@@ -35,14 +37,6 @@ cp .devcontainer/direnvrc ~/.config/direnv/direnvrc
 
 When you enter the project folder, direnv will ask you to allow the `.envrc` file to be loaded.
 Allow it by running `direnv allow`.
-
-### [uv](https://docs.astral.sh/uv/)
-
-To manage package dependencies and virtual environments.
-
-```bash
-curl -LsSf https://astral.sh/uv/install.sh | sh
-```
 
 ### [Pre-commit](https://pre-commit.com/)
 
