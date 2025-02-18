@@ -6,9 +6,6 @@ eval "$(direnv hook bash)"
 mkdir -p ~/.config/direnv/
 cp /workspaces/$(basename "$(pwd)")/.devcontainer/direnvrc ~/.config/direnv/direnvrc
 
-echo "UPDATE PIP"
-pip3 install -U pip
-
 echo "UV INSTALL"
 curl -LsSf https://astral.sh/uv/install.sh | sh
 echo 'eval "$(uv generate-shell-completion bash)"' >> ~/.bashrc
