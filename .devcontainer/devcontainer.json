@@ -6,16 +6,11 @@
     "features": {
         "ghcr.io/devcontainers/features/common-utils": {
             "configureZshAsDefaultShell": true
-        }
+        },
+        "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
     },
     "onCreateCommand": ".devcontainer/on-create.sh",
     "postCreateCommand": ".devcontainer/post-create.sh",
-    "postStartCommand": {
-        "rootless-docker": [
-            "sudo",
-            "/usr/local/share/docker-init.sh"
-        ]
-    },
     "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/${localWorkspaceFolderBasename},type=bind,consistency=cached",
     "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
     "remoteEnv": {
@@ -23,9 +18,6 @@
         "WANDB_BASE_URL": "${localEnv:WANDB_BASE_URL}"
     },
     "remoteUser": "vscode",
-    "mounts": [
-        "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
-    ],
     "hostRequirements": {
         "gpu": "optional"
     },
