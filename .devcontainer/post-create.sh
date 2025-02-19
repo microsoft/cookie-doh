@@ -11,6 +11,10 @@ git config --global alias.cp cherry-pick
 git config --global alias.mt mergetool
 git config --global alias.pl pull --rebase
 
+echo "INSTALLING PACKAGES"
+uv sync
+direnv allow .
+
 echo "INSTALLING COMMITIZEN"
 uv tool install commitizen --with cz-conventional-gitmoji
 echo 'eval "$(register-python-argcomplete3 cz)"' >> ~/.bashrc
