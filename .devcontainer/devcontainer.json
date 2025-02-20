@@ -18,6 +18,9 @@
         "WANDB_BASE_URL": "${localEnv:WANDB_BASE_URL}"
     },
     "remoteUser": "vscode",
+    "mounts": [
+        "source=${localEnv:HOME}/.cache/uv,target=/home/vscode/.cache/uv,type=bind,consistency=cached"
+    ],
     "hostRequirements": {
         "gpu": "optional"
     },
