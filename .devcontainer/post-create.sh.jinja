@@ -22,7 +22,7 @@ echo 'eval "$(register-python-argcomplete3 cz)"' >> ~/.bashrc
 echo 'eval "$(register-python-argcomplete3 cz)"' >> ~/.zshrc
 {% endif -%}
 
-{% if precommit -%}
+{%- if precommit %}
 echo "CONFIGURING PRE-COMMIT"
 if [ ! -d .git ]; then
     echo "Initializing Git..."
