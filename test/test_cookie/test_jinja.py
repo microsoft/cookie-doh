@@ -4,7 +4,7 @@ from pathlib import Path
 import pytest
 from jinja2 import Environment, FileSystemLoader
 
-TEMPLATE_PATH = Path("template/")
+TEMPLATE_PATH = Path()
 ITEMS = {
     "organization": "microsoft",
     "project_name": "cookie-doh",
@@ -33,10 +33,8 @@ def environment() -> Environment:
         "SUPPORT.md.jinja",
         "pyproject.toml.jinja",
         "ruff.toml.jinja",
-        ".envrc.jinja",
-        ".python-version",
         ".devcontainer/post-create.sh.jinja",
-        "{% if documentation %}docs{% endif %}/getting_started.md.jinja",
+        "docs/getting_started.md.jinja",
     ]
 )
 def template_file(request: pytest.FixtureRequest) -> str:
@@ -49,7 +47,7 @@ def test_template(environment: Environment, template_file: str):
     if template_file in [
         "README.md.jinja",
         "pyproject.toml.jinja",
-        "{% if documentation %}docs{% endif %}/getting_started.md.jinja",
+        "docs/getting_started.md.jinja",
     ]:
         return
     rootfile = re.sub(r"{%.*?%}", "", template_file)
