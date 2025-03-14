@@ -64,20 +64,30 @@ repo_exists:
     create your repository on GitHub later on.
   default: false
 
-_subdirectory: template
+_min_copier_version: 9.6.0
+
+_preserve_symlinks: true
 
 _exclude:
-  - CHANGELOG.md
-  - cookie-doh.code-workspace
-  - uv.lock
-  - copier.yaml
   - copier.yml
+  - CHANGELOG.md
+  - src/cookie
+  - test/test_cookie
+  - dist
+  - uv.lock
   - .git
-  - .DS_Store
-  - .svn
-  - "~*"
-  - "*.py[co]"
-  - __pycache__
+  - .tmp
+  - .venv
+  - "{% if documentation %}docs{% endif %}"
+  - "{% if documentation %}mkdocs.yml{% endif %}"
+  - "{% if documentation %}.github/workflows/docs.yml{% endif %}"
+  - "{% if documentation %}bin/build-docs{% endif %}.jinja"
+  - "{% if documentation %}bin/serve-docs{% endif %}"
+  - "{% if commitizen %}.cz.toml{% endif %}"
+  - "{% if precommit %}.github/workflows/pre-commit.yml{% endif %}"
+  - "{% if precommit %}.pre-commit-config.yaml{% endif %}"
+  - "{% if microsoft_internal %}.azure-pipelines{% endif %}"
+  - "{% if microsoft_internal %}SECURITY.md{% endif %}"
 
 _message_after_copy: |
   Your project "{{ project_name }}" has been created successfully! 🎉
