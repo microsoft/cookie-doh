@@ -1,4 +1,5 @@
 version = 1
+revision = 1
 requires-python = ">=3.12"
 
 [[package]]
@@ -158,7 +159,7 @@ wheels = [
 
 [[package]]
 name = "cookie-doh"
-version = "0.0.22"
+version = "0.0.23"
 source = { editable = "." }
 
 [package.dev-dependencies]
