@@ -78,16 +78,16 @@ _exclude:
   - .git
   - .tmp
   - .venv
-  - "{% if documentation %}docs{% endif %}"
-  - "{% if documentation %}mkdocs.yml{% endif %}"
-  - "{% if documentation %}.github/workflows/docs.yml{% endif %}"
-  - "{% if documentation %}bin/build-docs{% endif %}.jinja"
-  - "{% if documentation %}bin/serve-docs{% endif %}"
-  - "{% if commitizen %}.cz.toml{% endif %}"
-  - "{% if precommit %}.github/workflows/pre-commit.yml{% endif %}"
-  - "{% if precommit %}.pre-commit-config.yaml{% endif %}"
-  - "{% if microsoft_internal %}.azure-pipelines{% endif %}"
-  - "{% if microsoft_internal %}SECURITY.md{% endif %}"
+  - "{% if not documentation %}docs{% endif %}"
+  - "{% if not documentation %}mkdocs.yml{% endif %}"
+  - "{% if not documentation %}.github/workflows/docs.yml{% endif %}"
+  - "{% if not documentation %}bin/build-docs{% endif %}.jinja"
+  - "{% if not documentation %}bin/serve-docs{% endif %}"
+  - "{% if not commitizen %}.cz.toml{% endif %}"
+  - "{% if not precommit %}.github/workflows/pre-commit.yml{% endif %}"
+  - "{% if not precommit %}.pre-commit-config.yaml{% endif %}"
+  - "{% if not microsoft_internal %}.azure-pipelines{% endif %}"
+  - "{% if not microsoft_internal %}SECURITY.md{% endif %}"
 
 _message_after_copy: |
   Your project "{{ project_name }}" has been created successfully! 🎉
