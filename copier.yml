@@ -48,7 +48,7 @@ microsoft_internal:
   type: bool
   help: If the project belongs to a Microsoft internal organization
   when: "{{ false }}"
-  default: "{{ organization in ['microsoft', 'technology-and-research', 'health-futures', 'ai4science'] }}"
+  default: "{{ organization in ['microsoft', 'technology-and-research', 'health-futures', 'ai4science', 'msr-cambridge-uk'] }}"
 
 license:
   type: str

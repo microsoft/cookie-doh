@@ -13,6 +13,7 @@ ITEMS = {
     "documentation": True,
     "precommit": True,
     "commitizen": True,
+    "microsoft_internal": True,
 }
 
 
@@ -26,6 +27,9 @@ def environment() -> Environment:
         ".github/workflows/automerge.yml.jinja",
         ".github/workflows/main.yml.jinja",
         ".github/workflows/pr.yml.jinja",
+        ".devcontainer/post-create.sh.jinja",
+        ".pre-commit-config.yaml.jinja",
+        "docs/getting_started.md.jinja",
         "Dockerfile.jinja",
         "LICENSE.jinja",
         "README.md.jinja",
@@ -33,9 +37,6 @@ def environment() -> Environment:
         "SUPPORT.md.jinja",
         "pyproject.toml.jinja",
         "ruff.toml.jinja",
-        ".devcontainer/post-create.sh.jinja",
-        "docs/getting_started.md.jinja",
-        ".pre-commit-config.yaml.jinja",
     ]
 )
 def template_file(request: pytest.FixtureRequest) -> str:
