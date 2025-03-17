@@ -2,7 +2,7 @@
 authors = []
 license = { text = "MIT License" }
 requires-python = ">=3.12"
-name = "{{project_name}}"
+name = "{{ project_name }}"
 version = "0.0.0"
 description = ""
 readme = "README.md"
@@ -26,7 +26,7 @@ docs = [
 default-groups = ["dev", "docs"]
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/{{ module }}"]
+packages = ["src/{{ module_name }}"]
 
 [build-system]
 requires = ["hatchling"]
