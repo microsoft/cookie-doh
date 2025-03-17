@@ -35,6 +35,7 @@ def environment() -> Environment:
         "ruff.toml.jinja",
         ".devcontainer/post-create.sh.jinja",
         "docs/getting_started.md.jinja",
+        ".pre-commit-config.yaml.jinja",
     ]
 )
 def template_file(request: pytest.FixtureRequest) -> str:
