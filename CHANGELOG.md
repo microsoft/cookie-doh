@@ -1,3 +1,29 @@
+## v0.0.23 (2025-03-17)
+
+### docs
+
+- change order of generated docs
+
+### feat
+
+- check pre-commit config in tests
+- change dependabot package ecosystem to uv
+- share uv cache from host and devcontainer
+
+### fix
+
+- wrong exclude conditions in copier yaml
+- wrong copier variable name
+- tests not passing
+- docker socket in devcontainer
+- relock uv
+- small fix
+- add missing wheels.yml file in template
+
+### refactor
+
+- remove template folder and use root instead with exclude patterns
+
 ## v0.0.22 (2025-02-18)
 
 ### docs
