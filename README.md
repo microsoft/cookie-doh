@@ -8,13 +8,13 @@
 
 Cookie-doh is a repository template for creating single Python package projects that include pre-configured development tools.
 
-## :woman_shrugging: Why should I care?
+## :woman_shrugging: Why use cookie-doh?
 
-* :seedling: Improve your development workflow.
+* :seedling: Improve your development workflow (checks, formatting, remote dev, etc.).
 
-* :scroll: Uses [uv](https://docs.astral.sh/uv) for dependency management.
+* :scroll: Uses [uv](https://docs.astral.sh/uv) for dependency management (configured and fast).
 
-* :tropical_drink: Less than a minute to create a fully pre-configured project!
+* :tropical_drink: quick and easy to start new projects!
 
 :link: Short-link: [https://aka.ms/cookie-doh]()
 
@@ -78,7 +78,7 @@ packaging. Configured so that your code is readily importable.
 
 Optional tools (configurable when you create a new project):
 
-* [MkDocs](https://squidfunk.github.io/mkdocs-material/) for beautiful markdown documentation builds (like [cookie-doh](https:microsoft.github.io/cookie-doh)'s).
+* [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) for beautiful markdown documentation builds (like [cookie-doh](https:microsoft.github.io/cookie-doh)'s).
 * [pre-commit](https://pre-commit.com/) for quick validation checks and fixes before committing.
 * [commitizen](https://commitizen-tools.github.io/commitizen/)
 for writing [conventional commits](https://www.conventionalcommits.org/), to help write better commit messages
