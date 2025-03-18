@@ -9,7 +9,7 @@ readme = "README.md"
 dependencies = []                  # write here dependencies of your project
 
 [dependency-groups]
-dev = ["codespell", "coverage", "ipykernel", "ruff", "pyright", "pytest"]
+dev = ["codespell", "coverage", "ipykernel", "ruff", "pyright", "pytest", "pytest-cov"]
 {%- if documentation %}
 docs = [
     "mkdocs",
@@ -21,7 +21,14 @@ docs = [
     "mkdocstrings-python",
     "pymdown-extensions",
 ]
-{% endif %}
+{%- endif %}
+
+[project.urls]
+repository = "https://github.com/{{ organization }}/{{ project_name }}"
+{%- if documentation %}
+documentation = "https://{{ organization }}.github.io/{{ project_name }}"
+{%- endif %}
+
 [tool.uv]
 default-groups = ["dev", "docs"]
 
