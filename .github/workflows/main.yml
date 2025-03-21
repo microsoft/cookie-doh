@@ -12,11 +12,11 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  pre-commit:
-    uses: ./.github/workflows/pre-commit.yml
+  precommit:
+    uses: ./.github/workflows/precommit.yml
 
-  run-tests:
-    uses: ./.github/workflows/run-tests.yml
+  tests:
+    uses: ./.github/workflows/tests.yml
 
   docs:
     uses: ./.github/workflows/docs.yml
