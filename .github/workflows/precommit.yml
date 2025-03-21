@@ -5,9 +5,9 @@ on:
   workflow_call:
 
 jobs:
-  pre-commit:
+  precommit:
     runs-on: ubuntu-latest
-    name: pre-commit
+    name: precommit
     steps:
       - uses: actions/checkout@v4
 

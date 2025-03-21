@@ -13,11 +13,11 @@ concurrency:
 
 jobs:
 {%- if precommit %}
-  pre-commit:
-    uses: ./.github/workflows/pre-commit.yml
+  precommit:
+    uses: ./.github/workflows/precommit.yml
 {% endif %}
-  run-tests:
-    uses: ./.github/workflows/run-tests.yml
+  tests:
+    uses: ./.github/workflows/tests.yml
 {% if documentation %}
   docs:
     uses: ./.github/workflows/docs.yml
