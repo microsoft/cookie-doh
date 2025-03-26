@@ -12,18 +12,16 @@ git config --global alias.mt mergetool
 git config --global alias.pl pull --rebase
 
 echo "INSTALLING PACKAGES"
-uv sync
+uv sync --link-mode copy
 direnv allow .
 
 echo "INSTALLING COMMITIZEN"
-uv tool install commitizen --with cz-conventional-gitmoji
-echo 'eval "$(register-python-argcomplete3 cz)"' >> ~/.bashrc
-echo 'eval "$(register-python-argcomplete3 cz)"' >> ~/.zshrc
+uv tool install commitizen --with cz-conventional-gitmoji --link-mode copy
 
 echo "CONFIGURING PRE-COMMIT"
 if [ ! -d .git ]; then
     echo "Initializing Git..."
     git init
 fi
-uv tool install pre-commit --with pre-commit-uv
+uv tool install pre-commit --with pre-commit-uv --link-mode copy
 pre-commit install --install-hooks
