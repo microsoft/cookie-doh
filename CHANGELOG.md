@@ -1,3 +1,36 @@
+## v0.0.24 (2025-04-25)
+
+### ✨ Features
+
+- working dockerfile and some fixes
+
+### chore
+
+- remove non working azure pipeline component governance
+- minor adjustments to readme
+
+### dep-bump
+
+- update packages
+
+### feat
+
+- add dockerfile and template
+- add url metadata to pyproject.toml
+
+### fix
+
+- ci failing
+
+### refactor
+
+- modify dockerfiles
+- rename github workflows
+
+### style
+
+- minor style edits
+
 ## v0.0.23 (2025-03-17)
 
 ### docs
