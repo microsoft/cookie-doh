@@ -1,6 +1,6 @@
 FROM ubuntu:24.04-minimal
 
-ENV PROJECT_NAME=cookie-doh
+ENV PROJECT_NAME=project
 ENV PROJECT_PATH=/workspace/$PROJECT_NAME
 ENV PATH=/root/.local/bin:${PATH}
 ENV PATH=$PROJECT_PATH/bin:$PATH
