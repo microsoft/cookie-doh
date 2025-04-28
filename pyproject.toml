@@ -3,7 +3,7 @@ authors = [{ name = "Javier Zazo", email = "javierzazo@microsoft.com" }]
 license = { text = "MIT License" }
 requires-python = ">=3.12"
 name = "cookie-doh"
-version = "0.0.24"
+version = "0.0.25"
 description = ""
 readme = "README.md"
 dependencies = []
