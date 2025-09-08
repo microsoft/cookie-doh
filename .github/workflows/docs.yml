@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     name: build-docs
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Install uv
         uses: astral-sh/setup-uv@v6
@@ -24,7 +24,7 @@ jobs:
           bin/build-docs
 
       - name: upload-gh-pages
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: dist/site
 
