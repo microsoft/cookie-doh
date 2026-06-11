@@ -36,9 +36,10 @@ jobs:
       - name: Run Copier Template
         run: |
           copier copy . .tmp/generated-template \
-            -d organization="msr-cambridge-uk" \
-            -d project_name="sourdough" \
-            -d module_name="dough" \
+            --defaults \
+            -d organization="microsoft" \
+            -d project_name="cookie-doh" \
+            -d module_name="cookie" \
             -d cli="doh" \
             -d flash_attn="${{ matrix.flash_attn }}" \
             -d precommit="${{ matrix.precommit }}" \
