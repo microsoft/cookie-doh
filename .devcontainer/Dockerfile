@@ -1,4 +1,4 @@
-FROM nvcr.io/nvidia/cuda:12.9.1-cudnn-devel-ubuntu24.04
+FROM nvcr.io/nvidia/cuda:13.3.0-cudnn-devel-ubuntu24.04
 
 ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
 ENV LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64
