@@ -3,7 +3,7 @@ name: main
 on:
   workflow_dispatch:
   push:
-    branches: [ main ]
+    branches: [main]
     tags:
       - "v[0-9]+.[0-9]+.[0-9]+"
 
@@ -17,12 +17,13 @@ jobs:
     uses: ./.github/workflows/precommit.yml
     permissions:
       contents: read
-{% endif %}
+{%- endif %}
+
   tests:
     uses: ./.github/workflows/tests.yml
     permissions:
       contents: read
-{% if documentation %}
+{%- if documentation %}
   docs:
     uses: ./.github/workflows/docs.yml
     permissions:
