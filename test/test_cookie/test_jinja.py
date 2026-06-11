@@ -30,7 +30,6 @@ def environment() -> Environment:
         ".devcontainer/post-create.sh.jinja",
         ".pre-commit-config.yaml.jinja",
         "docs/getting_started.md.jinja",
-        "Dockerfile.jinja",
         "LICENSE.jinja",
         "README.md.jinja",
         "ruff.toml.jinja",
@@ -50,6 +49,8 @@ def test_template(environment: Environment, template_file: str):
         "README.md.jinja",
         "pyproject.toml.jinja",
         "docs/getting_started.md.jinja",
+        ".github/workflows/main.yml.jinja",
+        ".github/workflows/pr.yml.jinja",
     ]:
         return
     rootfile = re.sub(r"{%.*?%}", "", template_file)
