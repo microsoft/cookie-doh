@@ -28,6 +28,7 @@ jobs:
         run: uv build
 
       - uses: actions/attest-build-provenance@e8998f949152b193b063cb0ec769d69d929409be # v2
+        if: ${{ github.event_name != 'pull_request' }}
         with:
           subject-path: dist/*
 
