@@ -7,43 +7,43 @@ jobs:
   run-tests:
     runs-on: ubuntu-latest
     name: run-tests
+    permissions:
+      contents: read
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+        with:
+          persist-credentials: false
 
       - name: Install uv
-        uses: astral-sh/setup-uv@v6
-        with:
-          version: "0.6.0"
+        uses: astral-sh/setup-uv@d0cc045d04ccac9d8b7881df0226f9e82c39688e # v6.8.0
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
         with:
           python-version: "3.12"
 
       - name: Install dependencies
         run: |
           uv sync --no-group docs
+        env:
+          UV_LINK_MODE: copy
 
       - name: ruff-check
         run: |
-          uv run ruff check --no-fix --output-format=github
+          uv run --no-sync ruff check --no-fix --output-format=github
 
       - name: ruff-format
         run: |
-          uv run ruff format --check
+          uv run --no-sync ruff format --check
 
       - name: pyright
         run: |
-          uv run pyright
+          uv run --no-sync pyright
 
       - name: codespell
         run: |
-          uv run codespell
+          uv run --no-sync codespell
 
       - name: pytest
         run: |
-          uv run coverage run -m pytest
-
-      - name: coverage
-        run: |
-          uv run coverage xml -o .tmp/reports/coverage.xml
+          uv run --no-sync pytest

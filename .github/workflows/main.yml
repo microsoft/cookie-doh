@@ -3,7 +3,7 @@ name: main
 on:
   workflow_dispatch:
   push:
-    branches: [ main ]
+    branches: [main]
     tags:
       - "v[0-9]+.[0-9]+.[0-9]+"
 
@@ -14,13 +14,15 @@ concurrency:
 jobs:
   precommit:
     uses: ./.github/workflows/precommit.yml
+    permissions:
+      contents: read
 
   tests:
     uses: ./.github/workflows/tests.yml
-
+    permissions:
+      contents: read
   docs:
     uses: ./.github/workflows/docs.yml
-    secrets: inherit
     permissions:
       contents: read
       pages: write
@@ -28,16 +30,12 @@ jobs:
 
   wheels:
     uses: ./.github/workflows/wheels.yml
-    secrets: inherit
     permissions:
       contents: read
       actions: write
       id-token: write
 
-  codeql:
-    uses: ./.github/workflows/codeql.yml
-    secrets: inherit
+  copier:
+    uses: ./.github/workflows/copier.yml
     permissions:
       contents: read
-      actions: read
-      security-events: write

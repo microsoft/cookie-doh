@@ -12,6 +12,8 @@ updates:
     commit-message:
       prefix: ":arrow_up: dep-bump"
       include: scope
+    cooldown:
+      default-days: 7
 
   - package-ecosystem: uv
     directory: "/" # location of package manifests
@@ -30,3 +32,27 @@ updates:
     commit-message:
       prefix: ":arrow_up: dep-bump"
       include: scope
+    cooldown:
+      default-days: 7
+
+  - package-ecosystem: docker
+    directory: "/"
+    schedule:
+      interval: weekly
+    target-branch: main
+    commit-message:
+      prefix: ":arrow_up: dep-bump"
+      include: scope
+    cooldown:
+      default-days: 7
+
+  - package-ecosystem: docker
+    directory: ".devcontainer"
+    schedule:
+      interval: weekly
+    target-branch: main
+    commit-message:
+      prefix: ":arrow_up: dep-bump"
+      include: scope
+    cooldown:
+      default-days: 7

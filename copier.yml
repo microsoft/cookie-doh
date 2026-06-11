@@ -48,7 +48,7 @@ microsoft_internal:
   type: bool
   help: If the project belongs to a Microsoft internal organization
   when: "{{ false }}"
-  default: "{{ organization in ['microsoft', 'technology-and-research', 'health-futures', 'ai4science', 'msr-cambridge-uk'] }}"
+  default: "{{ organization in ['microsoft'] }}"
 
 license:
   type: str
@@ -93,10 +93,11 @@ _message_after_copy: |
   Your project "{{ project_name }}" has been created successfully! 🎉
 
   Required dependencies:
-  * Make sure you have `uv` installed.
-  * Instructions: https://microsoft.github.io/cookie-doh/dev_setup
-  * You can also install optional tools like `direnv` and `pre-commit` following the link above
-  if needed for your project.
+  * Make sure you have `uv` installed: https://docs.astral.sh/uv/getting-started/installation/
+  * We recommend to install optional tools like `direnv` and `GitHub-CLI`:
+
+      Direnv: https://msr-cambridge-uk.github.io/msr-cookie-doh/dev_setup/#direnv
+      GitHub CLI: https://msr-cambridge-uk.github.io/msr-cookie-doh/dev_setup/#github-cli
 
   Next steps:
 

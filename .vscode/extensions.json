@@ -3,12 +3,14 @@
         "ms-python.python",
         "ms-python.debugpy",
         "ms-python.vscode-pylance",
-        "ms-azuretools.vscode-docker",
+        "ms-azuretools.vscode-containers",
+        "ms-toolsai.jupyter",
+        "ms-vscode.vscode-chat-customizations-evaluations",
         "charliermarsh.ruff",
         "eamodio.gitlens",
         "redhat.vscode-yaml",
         "bierner.github-markdown-preview",
-        "GitHub.copilot",
+        "GitHub.copilot-chat",
         "GitHub.vscode-pull-request-github"
     ]
 }

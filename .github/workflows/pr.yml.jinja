@@ -12,20 +12,23 @@ jobs:
 {%- if precommit %}
   precommit:
     uses: ./.github/workflows/precommit.yml
+    permissions:
+      contents: read
 {% endif %}
   tests:
     uses: ./.github/workflows/tests.yml
+    permissions:
+      contents: read
 {% if documentation %}
   docs:
     uses: ./.github/workflows/docs.yml
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
 {% endif %}
   wheels:
     uses: ./.github/workflows/wheels.yml
-
-  codeql:
-    uses: ./.github/workflows/codeql.yml
-    secrets: inherit
     permissions:
       contents: read
-      actions: read
-      security-events: write
+      actions: write
