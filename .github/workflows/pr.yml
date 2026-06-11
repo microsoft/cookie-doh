@@ -32,6 +32,8 @@ jobs:
       contents: read
       actions: write
       id-token: write
+      attestations: write
+      id-token: write
 
   copier:
     uses: ./.github/workflows/copier.yml
