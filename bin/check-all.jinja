@@ -20,6 +20,10 @@ echo "RUNNING CODESPELL"
 uv run codespell
 
 echo
+echo "RUNNING ZIZMOR"
+uv run zizmor .
+
+echo
 echo "RUNNING PYTEST AND COVERAGE"
 uv run coverage run -m pytest
 {% if documentation %}
