@@ -15,13 +15,13 @@ or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any addi
 
 ## :space_invader: Codespaces
 
-We provide a configured devcontainer for you to use in your new project and/or msr-cookie-doh itself.
+We provide a configured devcontainer for you to use in your new project and/or cookie-doh itself.
 You can create a container image with all the necessary dependencies,
 and use it for remote development in a remote node with [GitHub Codespaces](https://docs.github.com/en/codespaces).
 
 :point_right: Click below to clone or fork this repository automatically and start developing:
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/msr-cambridge-uk/msr-cookie-doh)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/microsoft/cookie-doh)
 
 ## :gear: Devcontainer
 
