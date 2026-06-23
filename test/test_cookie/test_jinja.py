@@ -24,7 +24,6 @@ def environment() -> Environment:
 
 @pytest.fixture(
     params=[
-        ".github/workflows/automerge.yml.jinja",
         ".github/workflows/main.yml.jinja",
         ".github/workflows/pr.yml.jinja",
         ".devcontainer/post-create.sh.jinja",
