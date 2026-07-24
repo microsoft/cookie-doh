@@ -38,6 +38,11 @@ documentation = "https://microsoft.github.io/cookie-doh"
 [tool.uv]
 default-groups = ["dev", "docs"]
 
+[[tool.uv.index]]
+name = "mspypi"
+url = "https://packagefeedproxy.microsoft.io/pypi/simple"
+default = true
+
 [tool.hatch.build.targets.wheel]
 packages = ["src/cookie"]
 
