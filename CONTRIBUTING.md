@@ -39,7 +39,7 @@ and/or [PyCharm](https://www.jetbrains.com/help/pycharm/connect-to-devcontainer.
 The only required dependency for local development is [uv](https://docs.astral.sh/uv/getting-started/installation/).
 
 We recommend installing some extra dependencies to improve the development experience, e.g.,
-[direnv](https://direnv.net/), [GitHub CLI](https://cli.github.com/), [pre-commit](https://pre-commit.com/) and
+[direnv](https://direnv.net/), [GitHub CLI](https://cli.github.com/) and
 [commitizen](https://commitizen-tools.github.io/commitizen/).
 
 ## :hammer_and_wrench: Description of development tools
@@ -54,7 +54,6 @@ packaging, i.e., makes your code readily importable!
 makes your code more readable!
 * [codespell](https://github.com/codespell-project/codespell) for spell checking: pinpoints spelling errors across code and documents.
 * [CI workflows](https://en.wikipedia.org/wiki/Continuous_integration): automates validation when you submit a PR or merge to `main` branch.
-* [pre-commit](https://pre-commit.com/) for quick validation checks and fixes before committing.
 * [commitizen](https://commitizen-tools.github.io/commitizen/)
 for writing [conventional commits](https://www.conventionalcommits.org/), to help write better commit messages
 and track changes through [time](https://github.com/microsoftokie-doh/blob/main/CHANGELOG.md).

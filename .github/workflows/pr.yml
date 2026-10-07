@@ -9,25 +9,20 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  precommit:
-    uses: ./.github/workflows/precommit.yml
-    permissions:
-      contents: read
-
   tests:
-    uses: ./.github/workflows/tests.yml
+    uses: $/.github/workflows/tests.yml
     permissions:
       contents: read
 
   docs:
-    uses: ./.github/workflows/docs.yml
+    uses: $/.github/workflows/docs.yml
     permissions:
       contents: read
       pages: write
       id-token: write
 
   wheels:
-    uses: ./.github/workflows/wheels.yml
+    uses: $/.github/workflows/wheels.yml
     permissions:
       contents: read
       actions: write
@@ -35,6 +30,6 @@ jobs:
       attestations: write
 
   copier:
-    uses: ./.github/workflows/copier.yml
+    uses: $/.github/workflows/copier.yml
     permissions:
       contents: read

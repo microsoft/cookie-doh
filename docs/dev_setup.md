@@ -38,16 +38,6 @@ cp .devcontainer/direnvrc ~/.config/direnv/direnvrc
 When you enter the project folder, direnv will ask you to allow the `.envrc` file to be loaded.
 Allow it by running `direnv allow`.
 
-### [Pre-commit](https://pre-commit.com/)
-
-To run code formatting and linting before committing.
-In your projects, you should enable pre-commit hooks by running:
-
-```bash
-uv tool install pre-commit --with pre-commit-uv  # local user install
-pre-commit install --install-hooks  # enable pre-commit hooks inside project
-```
-
 ### [Commitizen](https://commitizen-tools.github.io/commitizen/)
 
 To help with [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/).

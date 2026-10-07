@@ -20,7 +20,7 @@
 Instructions: <https://microsoft.github.io/cookie-doh/dev_setup>
 
 * Make sure you have `uv` installed.
-* Install optional tools like `direnv` and `pre-commit`.
+* Install optional tools like `direnv`.
 
 Once you've created your new repository, the creation process will tell you to:
 
@@ -61,8 +61,6 @@ Once you've created your new repository, the creation process will tell you to:
 
     ```bash
     git add .
-    uv tool install pre-commit --with pre-commit-uv  # only if you want to install pre-commit
-    pre-commit install --install-hooks  # only if you want to use pre-commit
     git commit -m "init: initialize repo"
     git push -u origin main
     ```

@@ -68,7 +68,7 @@ importantly, to improve readability of your code (to your future self and others
 If _codespell_ detects spelling errors, it will suggest corrections.
 You can add exceptions to the `.codespellrc` file.
 * The `bin` folder includes scripts to help you with common tasks. For example `bin/check-all` will
-run all checks including `pre-commit`, `ruff`, `pytest`, `pyright` and `mkdocs` (if enabled).
+run all checks including `ruff`, `pytest`, `pyright` and `mkdocs` (if enabled).
 You should run this check prior to committing changes to your repository or pushing to your remote.
 * The `.github` folder includes `.dependabot.yml` for automated dependency updates in GitHub,
 and workflows folder for automatic CI checks on pull requests, pushes, and weekly scheduled tasks.
@@ -76,23 +76,19 @@ and workflows folder for automatic CI checks on pull requests, pushes, and weekl
 environments automatically. We strongly encourage you to use _direnv_ to manage your [development
 environment](dev_setup.md#direnv) for its convenience.
 
-## :cherries: Pre-commit, commitizen and documentation (optional)
+## :cherries: Commitizen and documentation (optional)
 
 Other configuration files may include (depending on your choices during the _copier_ process):
 
 ```
-.pre-commit-config.yaml
 .cz.toml
 mkdocs.yml
 .apidoc_conf.py
 ```
 
-* Pre-commit is a tool to run code formatting and linting before committing changes.
-You can run `pre-commit run --all-files` to run a bunch of checks manually (after having installed it with `uv tool install pre-commit --with pre-commit-uv; pre-commit install --install-hooks`)
-Add new hooks or remove existing ones in the `.pre-commit-config.yaml` file.
 * The `.cz.toml` file is used by _commitizen_ to write commit message.
 It relies on the `cz-conventional-gitmoji` plugin to combine gitmoji and conventional commits.
-Write a commit as `fix: correct typo in README` or `feat: add new feature` and `pre-commit` will
+Write a commit as `fix: correct typo in README` or `feat: add new feature` and Commitizen will
 prepend a corresponding gitmoji to your commit message.
 Run `cz commit` to write a commit message interactively listing all possible types and options.
 * Finally, the `mkdocs.yml` and `.apidoc_conf.py` file are used by _mkdocs_ and _sphinx_ to

@@ -11,7 +11,6 @@ ITEMS = {
     "module_name": "cookie",
     "license": "Microsoft Corporation",
     "documentation": True,
-    "precommit": True,
     "commitizen": True,
     "microsoft_internal": True,
 }
@@ -27,7 +26,6 @@ def environment() -> Environment:
         ".github/workflows/main.yml.jinja",
         ".github/workflows/pr.yml.jinja",
         ".devcontainer/post-create.sh.jinja",
-        ".pre-commit-config.yaml.jinja",
         "docs/getting_started.md.jinja",
         "LICENSE.jinja",
         "README.md.jinja",

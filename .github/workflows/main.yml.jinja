@@ -12,27 +12,20 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-{%- if precommit %}
-  precommit:
-    uses: ./.github/workflows/precommit.yml
-    permissions:
-      contents: read
-{%- endif %}
-
   tests:
-    uses: ./.github/workflows/tests.yml
+    uses: $/.github/workflows/tests.yml
     permissions:
       contents: read
 {%- if documentation %}
   docs:
-    uses: ./.github/workflows/docs.yml
+    uses: $/.github/workflows/docs.yml
     permissions:
       contents: read
       pages: write
       id-token: write
 {% endif %}
   wheels:
-    uses: ./.github/workflows/wheels.yml
+    uses: $/.github/workflows/wheels.yml
     permissions:
       contents: read
       actions: write

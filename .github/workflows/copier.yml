@@ -11,7 +11,6 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        precommit: [true, false]
         documentation: [true, false]
         commitizen: [true, false]
 
@@ -34,7 +33,6 @@ jobs:
             -d module_name="cookie" \
             -d cli="doh" \
             -d flash_attn="${{ matrix.flash_attn }}" \
-            -d precommit="${{ matrix.precommit }}" \
             -d documentation="${{ matrix.documentation }}" \
             -d commitizen="${{ matrix.commitizen }}"
 
@@ -44,9 +42,6 @@ jobs:
           ls -la
           git init -q
           git add -A
-          if ${{ matrix.precommit }}; then
-            SKIP=pinact uvx pre-commit run --all-files
-          fi
           uvx ruff check --exit-non-zero-on-fix
           uvx ruff format --exit-non-zero-on-format
           uvx codespell
