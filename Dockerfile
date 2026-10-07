@@ -9,7 +9,7 @@ ENV PATH=$PROJECT_PATH/.venv/bin:$PATH
 RUN apt-get -qq update && \
     apt-get upgrade -y --no-install-recommends && \
     apt-get -qq install --no-install-recommends \
-    python3.12 python3.12-dev libaio-dev git wget curl ca-certificates autoconf automake \
+    libaio-dev git wget curl ca-certificates autoconf automake \
     build-essential libtool libibverbs-dev rdma-core ninja-build cmake && \
     apt-get -qq clean && \
     rm -rf /var/lib/apt/lists/* && \
@@ -25,11 +25,9 @@ RUN groupadd --gid ${USER_GID} ${USERNAME} && \
 
 # Silence uv complaining about not being able to use hard links,
 # tell uv to byte-compile packages for faster application startups,
-# prevent uv from accidentally downloading isolated Python builds,
 ENV UV_LINK_MODE=copy
 ENV UV_COMPILE_BYTECODE=1
-ENV UV_PYTHON=python3.12
-ENV UV_PYTHON_DOWNLOADS=never
+ENV UV_PYTHON=3.14
 ENV UV_CACHE_DIR=/home/${USERNAME}/.cache/uv
 ENV UV_PROJECT_ENVIRONMENT=$PROJECT_PATH/.venv
 
