@@ -11,7 +11,6 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        precommit: [true, false]
         documentation: [true, false]
         commitizen: [true, false]
 
@@ -20,15 +19,7 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Install uv
-        uses: astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7 # v10.2.0
-        with:
-          version: "0.11"
-
-      - name: Set up Python
-        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
-        with:
-          python-version: "3.12"
+      - uses: $/.github/actions/setup-python-uv
 
       - name: Install Copier
         run: uv tool install copier
@@ -42,7 +33,6 @@ jobs:
             -d module_name="cookie" \
             -d cli="doh" \
             -d flash_attn="${{ matrix.flash_attn }}" \
-            -d precommit="${{ matrix.precommit }}" \
             -d documentation="${{ matrix.documentation }}" \
             -d commitizen="${{ matrix.commitizen }}"
 
@@ -52,9 +42,6 @@ jobs:
           ls -la
           git init -q
           git add -A
-          if ${{ matrix.precommit }}; then
-            SKIP=pinact uvx pre-commit run --all-files
-          fi
           uvx ruff check --exit-non-zero-on-fix
           uvx ruff format --exit-non-zero-on-format
           uvx codespell

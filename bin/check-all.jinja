@@ -1,9 +1,4 @@
 #!/usr/bin/env bash
-{% if precommit %}
-echo "RUNNING PRE-COMMIT HOOKS"
-uvx --with pre-commit-uv -- pre-commit run --all
-{% endif %}
-echo
 echo "RUNNING RUFF CHECK"
 uv run ruff check
 

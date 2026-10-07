@@ -1,7 +1,7 @@
 [project]
 authors = []
 license = { text = "MIT License" }
-requires-python = ">=3.12"
+requires-python = ">=3.14"
 name = "{{ project_name }}"
 version = "0.0.0"
 description = ""
@@ -32,9 +32,9 @@ documentation = "https://{{ organization }}.github.io/{{ project_name }}"
 [tool.uv]
 default-groups = ["dev", "docs"]
 
-[tool.hatch.build.targets.wheel]
-packages = ["src/{{ module_name }}"]
-
 [build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+requires = ["uv_build"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "{{ module_name }}"

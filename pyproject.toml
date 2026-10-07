@@ -1,7 +1,7 @@
 [project]
 authors = [{ name = "Javier Zazo", email = "javierzazo@microsoft.com" }]
 license = { text = "MIT License" }
-requires-python = ">=3.12"
+requires-python = ">=3.14"
 name = "cookie-doh"
 version = "0.0.25"
 description = ""
@@ -38,14 +38,9 @@ documentation = "https://microsoft.github.io/cookie-doh"
 [tool.uv]
 default-groups = ["dev", "docs"]
 
-[[tool.uv.index]]
-name = "mspypi"
-url = "https://packagefeedproxy.microsoft.io/pypi/simple"
-default = true
-
-[tool.hatch.build.targets.wheel]
-packages = ["src/cookie"]
-
 [build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+requires = ["uv_build"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "cookie"

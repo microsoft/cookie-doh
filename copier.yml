@@ -30,18 +30,11 @@ documentation:
     This will add a `docs` directory with mkdocs setup and CI builds.
   default: false
 
-precommit:
-  type: bool
-  help: |
-    Do you want to include pre-commit hooks in your project?
-    This will add a `.pre-commit-config.yaml` file with some basic hooks.
-  default: false
-
 commitizen:
   type: bool
   help: |
     Do you want to include commitizen in your project?
-    This will add a `.cz.toml` file and `commitizen` hooks to .pre-commit-config.yaml (if used).
+    This will add a `.cz.toml` file.
   default: false
 
 microsoft_internal:
@@ -84,8 +77,6 @@ _exclude:
   - "{% if not documentation %}bin/build-docs{% endif %}.jinja"
   - "{% if not documentation %}bin/serve-docs{% endif %}"
   - "{% if not commitizen %}.cz.toml{% endif %}"
-  - "{% if not precommit %}.github/workflows/pre-commit.yml{% endif %}"
-  - "{% if not precommit %}.pre-commit-config.yaml{% endif %}"
   - "{% if not microsoft_internal %}.azure-pipelines{% endif %}"
   - "{% if not microsoft_internal %}SECURITY.md{% endif %}"
 
@@ -128,13 +119,9 @@ _message_after_copy: |
 
      $ uv add <new-dependencies>
 
-  4. Add the project outputs, configure pre-commit and commit your changes:
+  4. Add the project outputs and commit your changes:
 
      $ git add .
-     {% if precommit -%}
-     uv tool install pre-commit --with pre-commit-uv
-     pre-commit install --install-hooks
-     {% endif -%}
      $ git commit -m "init: initialize repo"
 
   5. Happy coding! 🚀
