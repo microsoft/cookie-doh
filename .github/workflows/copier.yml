@@ -20,7 +20,7 @@ jobs:
         with:
           persist-credentials: false
 
-      - uses: ./.github/actions/setup-python-uv
+      - uses: $/.github/actions/setup-python-uv
 
       - name: Install Copier
         run: uv tool install copier
