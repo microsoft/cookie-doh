@@ -1,4 +1,4 @@
-FROM nvcr.io/nvidia/cuda:13.4.2-cudnn-devel-ubuntu24.04 AS base
+FROM nvcr.io/nvidia/cuda:13.4.3-cudnn-devel-ubuntu24.04 AS base
 
 ENV PROJECT_NAME=project
 ENV PROJECT_PATH=/workspace/$PROJECT_NAME
